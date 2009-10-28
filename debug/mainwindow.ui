@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Редактор лабіринту</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="MyGLWidget" name="glWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>821</width>
+      <height>631</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbAddBox">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>30</y>
+      <width>135</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Додати бокс</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbChangeBox">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>60</y>
+      <width>135</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Змінити бокс</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbDellLustBox">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>90</y>
+      <width>135</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Видалити останній</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbDellAllBoxes">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>150</y>
+      <width>135</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Видалити усі бокси</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbDellNBox">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>120</y>
+      <width>135</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Видалити бокс №</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbChangeSettings">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>580</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Змінити налаштування</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pbClose">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>630</y>
+      <width>97</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Зачинити</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_5"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Довідка</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_4"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>Довідка</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Про программу</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>Вийти</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyGLWidget</class>
+   <extends>QWidget</extends>
+   <header>myglwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pbClose</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1189</x>
+     <y>969</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1082</x>
+     <y>945</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
