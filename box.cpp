@@ -79,7 +79,7 @@ QDomElement Box::Serialize(QDomDocument& DomDocument)
 
     QDomElement VpsNode = DomDocument.createElement("VPS");
 
-    VpsNode.setAttribute("Vertex_per_width", VertexPerWidght);
+    VpsNode.setAttribute("Vertex_per_widght", VertexPerWidght);
     VpsNode.setAttribute("Vertex_per_height", VertexPerHeight);
     VpsNode.setAttribute("Vertex_per_lenght", VertexPerLenght);
 
@@ -107,43 +107,45 @@ bool Box::Deserialize(const QDomElement& DomElement)
     Color.setGreen(sl[1].toInt(&bIsOk2));
     Color.setBlue(sl[2].toInt(&bIsOk3));
     if(bIsOk1 && bIsOk2 && bIsOk3)
-        ++nNodeCount;
+        nNodeCount++;
 
     sl = DomElement.attribute("Position", "1,1,1").split(",");
     Position.x = sl[0].toFloat(&bIsOk1);
-    Position.x = sl[1].toFloat(&bIsOk2);
-    Position.x = sl[2].toFloat(&bIsOk3);
+    Position.y = sl[1].toFloat(&bIsOk2);
+    Position.z = sl[2].toFloat(&bIsOk3);
     if(bIsOk1 && bIsOk2 && bIsOk3)
-        ++nNodeCount;
+        nNodeCount++;
 
     AngleY = DomElement.attribute("Rotation").toFloat(&bIsOk1);
     if(bIsOk1)
-                ++nNodeCount;
+                nNodeCount++;
 
     QDomElement OptionsNode = DomElement.firstChildElement("Options");
     if(!OptionsNode.isNull())
     {
-        QDomElement SizeNode = DomElement.firstChildElement("Size");
+        QDomElement SizeNode = OptionsNode.firstChildElement("Size");
 
-        Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
-         qDebug()<<"Widgth"<<Widght;
-        Height = SizeNode.attribute("Height").toFloat(&bIsOk2);
-        qDebug()<<"Height"<<Height;
-        Lenght = SizeNode.attribute("Lenght").toFloat(&bIsOk3);
-        qDebug()<<"Lenght"<<Lenght;
-        if(bIsOk1 && bIsOk2 && bIsOk3)
-            ++nNodeCount;
+        if(!SizeNode.isNull())
+        {
+            Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
+            Height = SizeNode.attribute("Height").toFloat(&bIsOk2);
+            Lenght = SizeNode.attribute("Lenght").toFloat(&bIsOk3);
+            if(bIsOk1 && bIsOk2 && bIsOk3)
+                nNodeCount++;
+        }
 
-        QDomElement VpsNode = DomElement.firstChildElement("VPS");
+        QDomElement VpsNode = OptionsNode.firstChildElement("VPS");
+        if(!SizeNode.isNull())
+        {
+            VertexPerWidght = VpsNode.attribute("Vertex_per_widght").toFloat(&bIsOk1);
+            VertexPerHeight = VpsNode.attribute("Vertex_per_height").toFloat(&bIsOk2);
+            VertexPerLenght = VpsNode.attribute("Vertex_per_lenght").toFloat(&bIsOk3);
+            if(bIsOk1 && bIsOk2 && bIsOk3)
+                nNodeCount++;
+        }
 
-        VertexPerWidght = VpsNode.attribute("Vertex_per_widght").toFloat(&bIsOk1);
-        VertexPerHeight = VpsNode.attribute("Vertex_per_height").toFloat(&bIsOk2);
-        VertexPerLenght = VpsNode.attribute("Vertex_per_lenght").toFloat(&bIsOk3);
-        if(bIsOk1 && bIsOk2 && bIsOk3)
-            ++nNodeCount;
 
-
-        QDomElement OtherNode = DomElement.firstChildElement("Other");
+        QDomElement OtherNode = OptionsNode.firstChildElement("Other");
         if(!OtherNode.isNull())
         {
 

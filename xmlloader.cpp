@@ -15,12 +15,14 @@ bool XmlLoader::LoadFile(QString sFileName)
         {
             QDomElement Root = DomDoc.documentElement();
             if(BoxManager::Deserialize(Root.firstChildElement("Boxes")))
+            {
                 bResult = true;
+                BoxManager::Show();
+            }
         }
         File.close();
     }
-
-    BoxManager::Show();
+    qDebug()<<"bResult"<<bResult;
     return bResult;
 }
 

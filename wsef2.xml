@@ -6,7 +6,7 @@
   <Box Texture_name="" Rotation="0" Position="0.000000, 0.000000, 0.000000" Color="128, 128, 128">
    <Options>
     <Size Height="10" Lenght="5" Widght="10"/>
-    <VPS Vertex_per_widgth="5" Vertex_per_height="5" Vertex_per_lenght="5"/>
+    <VPS Vertex_per_height="5" Vertex_per_lenght="5" Vertex_per_widght="5"/>
     <Other/>
    </Options>
   </Box>
