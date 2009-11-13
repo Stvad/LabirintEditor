@@ -126,8 +126,11 @@ bool Box::Deserialize(const QDomElement& DomElement)
         QDomElement SizeNode = DomElement.firstChildElement("Size");
 
         Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
+         qDebug()<<"Widgth"<<Widght;
         Height = SizeNode.attribute("Height").toFloat(&bIsOk2);
-        Lenght = SizeNode.attribute("Height").toFloat(&bIsOk3);
+        qDebug()<<"Height"<<Height;
+        Lenght = SizeNode.attribute("Lenght").toFloat(&bIsOk3);
+        qDebug()<<"Lenght"<<Lenght;
         if(bIsOk1 && bIsOk2 && bIsOk3)
             ++nNodeCount;
 
