@@ -5,6 +5,7 @@
 #include "point3d.h"
 #include "vertex.h"
 #include <qgl.h>
+#include <QtXml>
 
 class Box
 {
@@ -18,13 +19,15 @@ public:
     Vertex *m_points;
     unsigned short *m_indexes;
     int m_IndexSize;
-    float sWidght, sHeight, sLenght;
-    float sVertexPerWidght, sVertexPerHeight, sVertexPerLenght;
+    float Widght, Height, Lenght;
+    float VertexPerWidght, VertexPerHeight, VertexPerLenght;
     QColor Color;
 
     Point3D Position;
 
     float AngleX, AngleY, AngleZ;
+    QDomElement Serialize(QDomDocument& DomDocument);
+    bool Deserialize(const QDomElement& DomElement);
 };
 
 #endif // BOX_H

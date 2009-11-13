@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'nchangeboxdialog.h'
 **
-** Created: Sun Oct 25 23:39:20 2009
+** Created: Fri Nov 13 12:45:31 2009
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.0)
 **
 ** WARNING! All changes made in this file will be lost!

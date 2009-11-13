@@ -1,7 +1,7 @@
 # -------------------------------------------------
 # Project created by QtCreator 2009-06-11T10:50:39
 # -------------------------------------------------
-QT += opengl
+QT += opengl xml
 TARGET = LabirintEditor
 TEMPLATE = app
 SOURCES += myglwidget.cpp \
@@ -17,7 +17,8 @@ SOURCES += myglwidget.cpp \
     ChangeBoxDialog.cpp \
     DeliteBoxDialog.cpp \
     BoxBrokingMatchesDialog.cpp \
-    nchangeboxdialog.cpp
+    nchangeboxdialog.cpp \
+    xmlloader.cpp
 HEADERS += myglwidget.h \
     mainwindow.h \
     boxmanager.h \
@@ -30,7 +31,8 @@ HEADERS += myglwidget.h \
     ChangeBoxDialog.h \
     DeliteBoxDialog.h \
     BoxBrokingMatchesDialog.h \
-    nchangeboxdialog.h
+    nchangeboxdialog.h \
+    xmlloader.h
 OTHER_FILES += 
 FORMS += mainwindow.ui \
     AddBoxDialog.ui \

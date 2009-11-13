@@ -1,0 +1,15 @@
+<!DOCTYPE DomDocument>
+<Map>
+ <Texture/>
+ <Lighting/>
+ <Boxes>
+  <Box Texture_name="" Rotation="7" Position="0.000000, 0.000000, 0.000000" Color="149, 255, 234">
+   <Options>
+    <Size Height="10" Lenght="5" Widght="10"/>
+    <VPS Vertex_per_height="5" Vertex_per_width="5" Vertex_per_lenght="5"/>
+    <Other/>
+   </Options>
+  </Box>
+ </Boxes>
+ <Empty/>
+</Map>

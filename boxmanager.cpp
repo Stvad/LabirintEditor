@@ -62,20 +62,57 @@ int BoxManager::GetBoxesSize()
 }
 
 
-  void BoxManager::SelectBox(int Index)
-  {
+void BoxManager::SelectBox(int Index)
+{
       if(Index < 0 || Index > boxes.size()) return;
       if(m_IndexOfSelectedBox != -1) boxes[m_IndexOfSelectedBox].Color = m_TempColor;
       m_TempColor = boxes[Index].Color;
       boxes[Index].Color = m_SelectedColor;
       m_IndexOfSelectedBox = Index;
-  }
+}
 
-  void BoxManager::UnselectBox()
-  {
+void BoxManager::UnselectBox()
+{
       if(m_IndexOfSelectedBox >= 0 && m_IndexOfSelectedBox < boxes.size())
         boxes[m_IndexOfSelectedBox].Color = m_TempColor;
-  }
+}
+
+QDomElement BoxManager::Serialize(QDomDocument& DomDocument)
+{
+    QDomElement BoxesNode = DomDocument.createElement("Boxes");
+
+    for(int i = 0; i < boxes.size(); i++)
+    {
+        BoxesNode.appendChild(boxes[i].Serialize(DomDocument));
+    }
+
+
+    return BoxesNode;
+}
+
+bool BoxManager::Deserialize(const QDomElement& DomElement)
+{
+    bool bResult = false;
+    if(!DomElement.isNull())
+    {
+         bResult = true;
+
+                QDomElement CurBoxNode = DomElement.firstChildElement("Box");
+                while(!CurBoxNode.isNull())
+                {
+                   // MPlanetoidSystem* PS = new MPlanetoidSystem();
+                    Box tBox;
+                    if(tBox.Deserialize(CurBoxNode))
+                        boxes.push_back(tBox);
+
+                    CurBoxNode = CurBoxNode.nextSiblingElement("Box");
+                }
+
+
+
+    }
+    return bResult;
+}
 
   /*
   void BoxManager::MoveBoxLeft()

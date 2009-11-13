@@ -4,6 +4,7 @@
 #include <QtGui/QMainWindow>
 #include "myglwidget.h"
 #include <string.h>
+#include "xmlloader.h"
 
 namespace Ui {
     class MainWindow;
@@ -34,6 +35,8 @@ public slots:
     void setXYP();
     void setYZP();
     void setXZP();
+    void SaveMap();
+    void LoadMap();
 };
 
 #endif // MAINWINDOW_H

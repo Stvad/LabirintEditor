@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon Oct 26 00:28:58 2009
+** Created: Fri Nov 13 13:44:01 2009
 **      by: Qt User Interface Compiler version 4.6.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -34,6 +34,8 @@ public:
     QAction *action;
     QAction *action_4;
     QAction *action_5;
+    QAction *action_2;
+    QAction *action_3;
     QWidget *centralwidget;
     MyGLWidget *glWidget;
     QPushButton *pbChangeSettings;
@@ -70,6 +72,10 @@ public:
         action_4->setObjectName(QString::fromUtf8("action_4"));
         action_5 = new QAction(MainWindow);
         action_5->setObjectName(QString::fromUtf8("action_5"));
+        action_2 = new QAction(MainWindow);
+        action_2->setObjectName(QString::fromUtf8("action_2"));
+        action_3 = new QAction(MainWindow);
+        action_3->setObjectName(QString::fromUtf8("action_3"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         glWidget = new MyGLWidget(centralwidget);
@@ -133,7 +139,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 22));
+        menubar->setGeometry(QRect(0, 0, 1024, 24));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         menu_2 = new QMenu(menubar);
@@ -142,6 +148,8 @@ public:
 
         menubar->addAction(menu->menuAction());
         menubar->addAction(menu_2->menuAction());
+        menu->addAction(action_2);
+        menu->addAction(action_3);
         menu->addSeparator();
         menu->addAction(action_5);
         menu_2->addAction(action);
@@ -150,7 +158,7 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(pbClose, SIGNAL(clicked()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -162,6 +170,8 @@ public:
         action->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\262\321\226\320\264\320\272\320\260", 0, QApplication::UnicodeUTF8));
         action_4->setText(QApplication::translate("MainWindow", "\320\237\321\200\320\276 \320\277\321\200\320\276\320\263\321\200\320\260\320\274\320\274\321\203", 0, QApplication::UnicodeUTF8));
         action_5->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\271\321\202\320\270", 0, QApplication::UnicodeUTF8));
+        action_2->setText(QApplication::translate("MainWindow", "\320\227\320\261\320\265\321\200\320\265\320\263\321\202\320\270", 0, QApplication::UnicodeUTF8));
+        action_3->setText(QApplication::translate("MainWindow", "\320\222\321\226\320\264\320\272\321\200\320\270\321\202\320\270", 0, QApplication::UnicodeUTF8));
         pbChangeSettings->setText(QApplication::translate("MainWindow", "\320\227\320\274\321\226\320\275\320\270\321\202\320\270 \320\275\320\260\320\273\320\260\321\210\321\202\321\203\320\262\320\260\320\275\320\275\321\217", 0, QApplication::UnicodeUTF8));
         pbClose->setText(QApplication::translate("MainWindow", "\320\227\320\260\321\207\320\270\320\275\320\270\321\202\320\270", 0, QApplication::UnicodeUTF8));
         pbDellNBox->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \320\261\320\276\320\272\321\201 \342\204\226", 0, QApplication::UnicodeUTF8));

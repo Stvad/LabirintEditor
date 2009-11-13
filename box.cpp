@@ -33,12 +33,13 @@ Box::Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &i
         m_indexes[j] = indexes[j];
     }
    //this->Position = Position;
-   sWidght = Widght;
-   sHeight = Height;
-   sLenght = Lenght;
-   sVertexPerHeight = VertexPerHeight;
-   sVertexPerLenght = VertexPerLenght;
-   sVertexPerWidght = VertexPerWidght;
+   this->Widght = Widght;
+   this->Height = Height;
+   this->Lenght = Lenght;
+   this->VertexPerHeight = VertexPerHeight;
+   this->VertexPerLenght = VertexPerLenght;
+   this->VertexPerWidght = VertexPerWidght;
+   AngleY = 0;
    Color = Qt::blue;
 }
 
@@ -52,4 +53,103 @@ void Box::Show()
     glDrawElements(GL_TRIANGLES, m_IndexSize, GL_UNSIGNED_SHORT, m_indexes);
     glPopMatrix();
 
+}
+
+QDomElement Box::Serialize(QDomDocument& DomDocument)
+{
+    QDomElement BoxNode = DomDocument.createElement("Box");
+
+    QString sPosition, sColor;
+    sPosition.sprintf("%f, %f, %f", Position.x, Position.y, Position.z);
+
+    sColor.sprintf("%i, %i, %i", Color.red(), Color.green(), Color.blue());
+
+    BoxNode.setAttribute("Position", sPosition);
+    BoxNode.setAttribute("Rotation", AngleY);
+    BoxNode.setAttribute("Color", sColor);
+    BoxNode.setAttribute("Texture_name", "");
+
+    QDomElement OptionsNode = DomDocument.createElement("Options");
+
+    QDomElement SizeNode = DomDocument.createElement("Size");
+
+    SizeNode.setAttribute("Widght", Widght);
+    SizeNode.setAttribute("Height", Height);
+    SizeNode.setAttribute("Lenght", Lenght);
+
+    QDomElement VpsNode = DomDocument.createElement("VPS");
+
+    VpsNode.setAttribute("Vertex_per_width", VertexPerWidght);
+    VpsNode.setAttribute("Vertex_per_height", VertexPerHeight);
+    VpsNode.setAttribute("Vertex_per_lenght", VertexPerLenght);
+
+    QDomElement OtherOptionsNode = DomDocument.createElement("Other");
+
+    OptionsNode.appendChild(SizeNode);
+    OptionsNode.appendChild(VpsNode);
+    OptionsNode.appendChild(OtherOptionsNode);
+
+    BoxNode.appendChild(OptionsNode);
+
+    return BoxNode;
+}
+
+bool Box::Deserialize(const QDomElement& DomElement)
+{
+    if(DomElement.tagName() != "Box") return false;
+    QApplication::aboutQt();
+    int nNodeCount = 0;
+    bool bIsOk1, bIsOk2, bIsOk3;
+
+    DomElement.attribute("Texture", "none");
+
+    QStringList sl = DomElement.attribute("Color", "127,127,127").split(",");
+    Color.setRed(sl[0].toInt(&bIsOk1));
+    Color.setGreen(sl[1].toInt(&bIsOk2));
+    Color.setBlue(sl[2].toInt(&bIsOk3));
+    if(bIsOk1 && bIsOk2 && bIsOk3)
+        ++nNodeCount;
+
+    sl = DomElement.attribute("Position", "1,1,1").split(",");
+    Position.x = sl[0].toFloat(&bIsOk1);
+    Position.x = sl[1].toFloat(&bIsOk2);
+    Position.x = sl[2].toFloat(&bIsOk3);
+    if(bIsOk1 && bIsOk2 && bIsOk3)
+        ++nNodeCount;
+
+    AngleY = DomElement.attribute("Rotation").toFloat(&bIsOk1);
+    if(bIsOk1)
+                ++nNodeCount;
+
+    QDomElement OptionsNode = DomElement.firstChildElement("Options");
+    if(!OptionsNode.isNull())
+    {
+        QDomElement SizeNode = DomElement.firstChildElement("Size");
+        if(!SizeNode.isNull())
+        {
+            Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
+            Height = SizeNode.attribute("Height").toFloat(&bIsOk2);
+            Lenght = SizeNode.attribute("Height").toFloat(&bIsOk2);
+            if(bIsOk1 && bIsOk2 && bIsOk3)
+                ++nNodeCount;
+        }
+
+        QDomElement VpsNode = DomElement.firstChildElement("VPS");
+        if(!VpsNode.isNull())
+        {
+            VertexPerWidght = VpsNode.attribute("Vertex_per_widght").toFloat(&bIsOk1);
+            VertexPerHeight = VpsNode.attribute("Vertex_per_height").toFloat(&bIsOk2);
+            VertexPerLenght = VpsNode.attribute("Vertex_per_lenght").toFloat(&bIsOk3);
+            if(bIsOk1 && bIsOk2 && bIsOk3)
+                ++nNodeCount;
+        }
+
+        QDomElement OtherNode = DomElement.firstChildElement("Other");
+        if(!OtherNode.isNull())
+        {
+
+        }
+    }
+
+    return nNodeCount == 5;
 }

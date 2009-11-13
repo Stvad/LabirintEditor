@@ -53,10 +53,10 @@ void ChangeBoxDialog::update(int index)
     ui->lePosX->setText(QString::number(m_Box.Position.x));
     ui->lePosY->setText(QString::number(m_Box.Position.y));
     ui->lePosZ->setText(QString::number(m_Box.Position.z));
-    ui->leWidht->setText(QString::number(m_Box.sWidght));
-    ui->leHeight->setText(QString::number(m_Box.sHeight));
-    ui->leLenght->setText(QString::number(m_Box.sLenght));
-    ui->leWidhtPoints->setText(QString::number(m_Box.sVertexPerWidght));
-    ui->leHeightPoints->setText(QString::number(m_Box.sVertexPerHeight));
-    ui->leLenghtPoints->setText(QString::number(m_Box.sVertexPerLenght));
+    ui->leWidht->setText(QString::number(m_Box.Widght));
+    ui->leHeight->setText(QString::number(m_Box.Height));
+    ui->leLenght->setText(QString::number(m_Box.Lenght));
+    ui->leWidhtPoints->setText(QString::number(m_Box.VertexPerWidght));
+    ui->leHeightPoints->setText(QString::number(m_Box.VertexPerHeight));
+    ui->leLenghtPoints->setText(QString::number(m_Box.VertexPerLenght));
 }

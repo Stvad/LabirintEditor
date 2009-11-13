@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     m_ui->setupUi(this);
 
-
+    connect(m_ui->action_5, SIGNAL(triggered()), this, SLOT(close()));
     connect(m_ui->pbAddBox, SIGNAL(clicked()), this, SLOT(ShowAddBoxDlg()));
     connect(m_ui->pbChangeBox, SIGNAL(clicked()), this, SLOT(ShowChangeBoxDlg()));
     connect(m_ui->pbDellNBox, SIGNAL(clicked()), this, SLOT(ShowDellNBoxDlg()));
@@ -25,6 +25,9 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_ui->rbPXY, SIGNAL(clicked()), this, SLOT(setXYP()));
     connect(m_ui->rbPYZ, SIGNAL(clicked()), this, SLOT(setYZP()));
     connect(m_ui->rbPXZ, SIGNAL(clicked()), this, SLOT(setXZP()));
+    connect(m_ui->action_2, SIGNAL(triggered()), this, SLOT(SaveMap()));
+    connect(m_ui->action_3, SIGNAL(triggered()), this, SLOT(LoadMap()));
+
     //connect(m_ui->glWidget, SIGNAL())
     m_ui->glWidget->setFocusPolicy(Qt::ClickFocus);
     m_ui->rbPX->click();
@@ -112,4 +115,16 @@ void MainWindow::setXZP()
 {
     std::string Turn = "XZ";
     m_ui->glWidget->setTurn(Turn);
+}
+
+void MainWindow::SaveMap()
+{
+    QString *s = new QString();
+    XmlLoader::SaveFile(QFileDialog::getSaveFileName(this, tr("Выберите путь для сохранения пакета"), QDir::currentPath() , QString(), s, 0));
+}
+
+void MainWindow::LoadMap()
+{
+    QString *s = new QString();
+    XmlLoader::LoadFile(QFileDialog::getOpenFileName(this, tr("Выберите путь для сохранения пакета"), QDir::currentPath() , QString(), s, 0));
 }

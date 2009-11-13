@@ -4,6 +4,7 @@
 #include "box.h"
 #include <vector>
 #include "boxcreator.h"
+#include <QtXml>
 
 class BoxManager
 {
@@ -22,6 +23,8 @@ public:
   static int GetBoxesSize();
   static void SelectBox(int Index);
   static void UnselectBox();
+  static QDomElement Serialize(QDomDocument& DomDocument);
+  static bool Deserialize(const QDomElement& DomElement);
   /*
   static void MoveBoxLeft();
   static void MoveBoxRight();
