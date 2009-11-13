@@ -127,7 +127,7 @@ bool Box::Deserialize(const QDomElement& DomElement)
 
         Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
         Height = SizeNode.attribute("Height").toFloat(&bIsOk2);
-        Lenght = SizeNode.attribute("Height").toFloat(&bIsOk2);
+        Lenght = SizeNode.attribute("Height").toFloat(&bIsOk3);
         if(bIsOk1 && bIsOk2 && bIsOk3)
             ++nNodeCount;
 
