@@ -103,8 +103,13 @@ bool BoxManager::Deserialize(const QDomElement& DomElement)
                    // MPlanetoidSystem* PS = new MPlanetoidSystem();
                     Box tBox;
                     if(tBox.Deserialize(CurBoxNode))
+                    {
+                        Box tmBox = BoxCreator::CreateBox(tBox.Widght, tBox.Height, tBox.Lenght, tBox.VertexPerWidght, tBox.VertexPerHeight, tBox.VertexPerLenght);
+                        tBox.m_indexes = tmBox.m_indexes;
+                        tBox.m_points = tmBox.m_points;
                         boxes.push_back(tBox);
-
+                        QApplication::aboutQt();
+                    }
                     CurBoxNode = CurBoxNode.nextSiblingElement("Box");
                 }
 

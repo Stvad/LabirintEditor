@@ -97,7 +97,6 @@ QDomElement Box::Serialize(QDomDocument& DomDocument)
 bool Box::Deserialize(const QDomElement& DomElement)
 {
     if(DomElement.tagName() != "Box") return false;
-    QApplication::aboutQt();
     int nNodeCount = 0;
     bool bIsOk1, bIsOk2, bIsOk3;
 
@@ -125,24 +124,21 @@ bool Box::Deserialize(const QDomElement& DomElement)
     if(!OptionsNode.isNull())
     {
         QDomElement SizeNode = DomElement.firstChildElement("Size");
-        if(!SizeNode.isNull())
-        {
-            Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
-            Height = SizeNode.attribute("Height").toFloat(&bIsOk2);
-            Lenght = SizeNode.attribute("Height").toFloat(&bIsOk2);
-            if(bIsOk1 && bIsOk2 && bIsOk3)
-                ++nNodeCount;
-        }
+
+        Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
+        Height = SizeNode.attribute("Height").toFloat(&bIsOk2);
+        Lenght = SizeNode.attribute("Height").toFloat(&bIsOk2);
+        if(bIsOk1 && bIsOk2 && bIsOk3)
+            ++nNodeCount;
 
         QDomElement VpsNode = DomElement.firstChildElement("VPS");
-        if(!VpsNode.isNull())
-        {
-            VertexPerWidght = VpsNode.attribute("Vertex_per_widght").toFloat(&bIsOk1);
-            VertexPerHeight = VpsNode.attribute("Vertex_per_height").toFloat(&bIsOk2);
-            VertexPerLenght = VpsNode.attribute("Vertex_per_lenght").toFloat(&bIsOk3);
-            if(bIsOk1 && bIsOk2 && bIsOk3)
-                ++nNodeCount;
-        }
+
+        VertexPerWidght = VpsNode.attribute("Vertex_per_widght").toFloat(&bIsOk1);
+        VertexPerHeight = VpsNode.attribute("Vertex_per_height").toFloat(&bIsOk2);
+        VertexPerLenght = VpsNode.attribute("Vertex_per_lenght").toFloat(&bIsOk3);
+        if(bIsOk1 && bIsOk2 && bIsOk3)
+            ++nNodeCount;
+
 
         QDomElement OtherNode = DomElement.firstChildElement("Other");
         if(!OtherNode.isNull())

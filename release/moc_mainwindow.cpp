@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Mon Oct 26 17:14:32 2009
+** Created: Fri Nov 13 20:18:00 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   12, // methods
+      14,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -41,6 +41,8 @@ static const uint qt_meta_data_MainWindow[] = {
      139,   11,   11,   11, 0x0a,
      148,   11,   11,   11, 0x0a,
      157,   11,   11,   11, 0x0a,
+     166,   11,   11,   11, 0x0a,
+     176,   11,   11,   11, 0x0a,
 
        0        // eod
 };
@@ -50,7 +52,8 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "ShowChangeBoxDlg()\0ShowDellNBoxDlg()\0"
     "ShowChangeSettingsDlg()\0DeLastBox()\0"
     "DelAllBoxes()\0setXP()\0setYP()\0setZP()\0"
-    "setXYP()\0setYZP()\0setXZP()\0"
+    "setXYP()\0setYZP()\0setXZP()\0SaveMap()\0"
+    "LoadMap()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -90,9 +93,11 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 9: setXYP(); break;
         case 10: setYZP(); break;
         case 11: setXZP(); break;
+        case 12: SaveMap(); break;
+        case 13: LoadMap(); break;
         default: ;
         }
-        _id -= 12;
+        _id -= 14;
     }
     return _id;
 }

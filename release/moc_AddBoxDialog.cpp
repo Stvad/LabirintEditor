@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'AddBoxDialog.h'
 **
-** Created: Mon Oct 26 17:45:40 2009
+** Created: Fri Nov 13 20:18:03 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.3)
 **
 ** WARNING! All changes made in this file will be lost!
