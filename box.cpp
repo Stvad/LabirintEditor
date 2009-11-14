@@ -1,5 +1,11 @@
 #include "box.h"
 
+float Box::x = 0;
+float Box::y = 0;
+float Box::z = 0;
+std::vector <Vertex> Box::points;
+std::vector <unsigned short> Box::indexes;
+
 Box::Box()
    : Position()
 {
@@ -152,5 +158,248 @@ bool Box::Deserialize(const QDomElement& DomElement)
         }
     }
 
+    *this = CreateBox(Widght, Height, Lenght, VertexPerWidght, VertexPerHeight, VertexPerLenght);
     return nNodeCount == 5;
 }
+
+Box Box::CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght)
+{
+    points.clear();
+    indexes.clear();
+    float xn, yn, zn;
+    xn = Widht / VertexPerWidht;
+    yn = Height / VertexPerHeight;
+    zn = Lenght / VertexPerLenght;
+    Point3D rPosition(0, 0, 0);
+
+    IVerticalPlane(rPosition, Widht, Height, Lenght, xn, yn, zn);
+
+
+   IHorizontalPlane(rPosition, Widht, Height, Lenght, xn, yn, zn);
+
+   rPosition.z +=Lenght;
+
+   IVerticalPlaneNext(rPosition, Widht, Height, Lenght, xn, yn, zn);
+
+   rPosition.y +=Height;
+
+    rPosition.z -=Lenght;
+
+   IHorizontalPlaneNext(rPosition, Widht, Height, Lenght, xn, yn, zn);
+
+   rPosition.y -=Height;
+
+   IBokovPlane(rPosition, Widht, Height, Lenght, xn, yn, zn);
+
+   rPosition.x +=Widht;
+
+   IBokovPlaneNext(rPosition, Widht, Height, Lenght, xn, yn, zn);
+
+   return Box(points, indexes, Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
+}
+
+void Box::IVerticalPlane(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn)
+{
+   // Point3D Temp;
+    Vertex Temp;
+    Temp.Position.z = Position.z;
+    for(y = Position.y; y < Height; y+=yn)
+        for(x = Position.x; x < Widht; x+=xn)
+        {
+        int base = points.size();
+        Temp.Position.x = x;
+        Temp.Position.y = y;
+            points.push_back(Temp);
+            indexes.push_back(0 + base);
+
+        Temp.Position.x += xn;
+        Temp.Position.y += yn;
+            points.push_back(Temp);
+            indexes.push_back(1 + base);
+
+        Temp.Position.x = x;
+            points.push_back(Temp);
+            indexes.push_back(2 + base);
+
+        Temp.Position.y = y;
+              indexes.push_back(0 + base);
+
+        Temp.Position.x += xn;
+            points.push_back(Temp);
+            indexes.push_back(3 + base);
+
+        Temp.Position.y += yn;
+            indexes.push_back(1 + base);
+
+
+        }
+}
+
+
+void Box::IHorizontalPlane(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn)
+{
+    Vertex Temp;
+
+    Temp.Position.x = Position.x;
+    Temp.Position.y = Position.y;
+    Temp.Position.z = Position.z;
+    int base = points.size();
+    points.push_back(Temp);
+    indexes.push_back(0 + base);
+
+    Temp.Position.x += Widht;
+    Temp.Position.z += Lenght;
+    points.push_back(Temp);
+    indexes.push_back(1 + base);
+
+    Temp.Position.x = Position.x;
+    points.push_back(Temp);
+    indexes.push_back(2 + base);
+
+    Temp.Position.x = Position.x;
+    Temp.Position.y = Position.y;
+    Temp.Position.z = Position.z;
+    indexes.push_back(0 + base);
+
+    Temp.Position.x += Widht;
+    points.push_back(Temp);
+    indexes.push_back(3 + base);
+
+    Temp.Position.z += Lenght;
+    indexes.push_back(1 + base);
+
+
+
+}
+
+void Box::IBokovPlane(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn)
+{
+    Vertex Temp;
+    Temp.Position.x = Position.x;
+    Temp.Position.y = Position.y;
+    Temp.Position.z = Position.z;
+    int base = points.size();
+    points.push_back(Temp);
+    indexes.push_back(0 + base);
+
+    Temp.Position.y += Height;
+    Temp.Position.z += Lenght;
+    points.push_back(Temp);
+    indexes.push_back(1 + base);
+
+    Temp.Position.z -= Lenght;
+    points.push_back(Temp);
+    indexes.push_back(2 + base);
+
+    Temp.Position.y -= Height;
+    indexes.push_back(0 + base);
+
+    Temp.Position.z += Lenght;
+    points.push_back(Temp);
+    indexes.push_back(3 + base);
+
+    Temp.Position.y += Height;
+    indexes.push_back(1 + base);
+
+
+}
+
+void Box::IVerticalPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn)
+{
+    Vertex Temp;
+
+    Temp.Position.z = Position.z;
+
+    for(y = Position.y; y < Height; y+=yn)
+        for(x = Position.x; x < Widht; x+=xn)
+        {
+        int base = points.size();
+        Temp.Position.x = x;
+        Temp.Position.y = y;
+            points.push_back(Temp);
+            indexes.push_back(0 + base);
+
+        Temp.Position.y += yn;
+            points.push_back(Temp);
+            indexes.push_back(1 + base);
+
+        Temp.Position.x += xn;
+            points.push_back(Temp);
+            indexes.push_back(2 + base);
+
+           indexes.push_back(2 + base);
+
+        Temp.Position.y = y;
+            points.push_back(Temp);
+            indexes.push_back(3 + base);
+
+        Temp.Position.x = x;
+            indexes.push_back(0 + base);
+        }
+}
+
+void Box::IHorizontalPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn)
+{
+    Vertex Temp;
+
+    Temp.Position.x = Position.x;
+    Temp.Position.y = Position.y;
+    Temp.Position.z = Position.z;
+    int base = points.size();
+    points.push_back(Temp);
+    indexes.push_back(0 + base);
+
+    Temp.Position.z += Lenght;
+    points.push_back(Temp);
+    indexes.push_back(1 + base);
+
+    Temp.Position.x += Widht;
+    points.push_back(Temp);
+    indexes.push_back(2 + base);
+
+    Temp.Position.x = Position.x;
+    Temp.Position.z = Position.z;
+    indexes.push_back(2 + base);
+
+    Temp.Position.x += Widht;
+    Temp.Position.z += Lenght;
+    indexes.push_back(3 + base);
+
+    Temp.Position.z = Position.z;
+    points.push_back(Temp);
+    indexes.push_back(0 + base);
+
+}
+
+
+void Box::IBokovPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn)
+{
+    Vertex Temp;
+
+    Temp.Position.x = Position.x;
+    Temp.Position.y = Position.y;
+    Temp.Position.z = Position.z;
+    int base = points.size();
+    points.push_back(Temp);
+    indexes.push_back(0 + base);
+
+    Temp.Position.y += Height;
+    points.push_back(Temp);
+    indexes.push_back(1 + base);
+
+    Temp.Position.z += Lenght;
+    points.push_back(Temp);
+    indexes.push_back(2 + base);
+    indexes.push_back(2 + base);
+
+    Temp.Position.y -= Height;
+    points.push_back(Temp);
+    indexes.push_back(3 + base);
+
+    Temp.Position.z -= Lenght;
+    indexes.push_back(0 + base);
+
+
+}
+
+

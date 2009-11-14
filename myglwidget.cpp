@@ -23,13 +23,13 @@ MyGLWidget::MyGLWidget(QWidget *parent)
 
     Point3D Position(0, 0, 0);
 
-    m_Box = BoxCreator::CreateBox(10, 10, 5, 5, 5, 5);
+    m_Box = Box::CreateBox(10, 10, 5, 5, 5, 5);
     m_Box.Color = QColor(128, 128, 128);
     m_Box.Position = Position;
     BoxManager::AddBox(m_Box);
 
     ControlIsPressed = false;
-    //m_Box = m_BoxCreator.CreateBox(Position, 10, 10, 5, 5, 5, 5);
+    //m_Box = m_Box.CreateBox(Position, 10, 10, 5, 5, 5, 5);
    // BoxManager::AddBox(Position, 10, 10, 5, 5, 5, 5);
 }
 

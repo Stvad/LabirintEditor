@@ -22,7 +22,6 @@ bool XmlLoader::LoadFile(QString sFileName)
         }
         File.close();
     }
-    qDebug()<<"bResult"<<bResult;
     return bResult;
 }
 

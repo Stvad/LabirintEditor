@@ -1,0 +1,43 @@
+<!DOCTYPE DomDocument>
+<Map>
+ <Texture/>
+ <Lighting/>
+ <Boxes>
+  <Box Texture_name="" Rotation="0" Position="0.000000, 0.000000, 0.000000" Color="128, 128, 128">
+   <Options>
+    <Size Height="10" Lenght="5" Widght="10"/>
+    <VPS Vertex_per_height="5" Vertex_per_lenght="5" Vertex_per_widght="5"/>
+    <Other/>
+   </Options>
+  </Box>
+  <Box Texture_name="" Rotation="0" Position="0.000000, 0.000000, 0.000000" Color="0, 0, 255">
+   <Options>
+    <Size Height="10" Lenght="5" Widght="10"/>
+    <VPS Vertex_per_height="5" Vertex_per_lenght="5" Vertex_per_widght="5"/>
+    <Other/>
+   </Options>
+  </Box>
+  <Box Texture_name="" Rotation="0" Position="0.000000, 0.000000, 0.000000" Color="0, 0, 255">
+   <Options>
+    <Size Height="5" Lenght="5" Widght="5"/>
+    <VPS Vertex_per_height="5" Vertex_per_lenght="5" Vertex_per_widght="5"/>
+    <Other/>
+   </Options>
+  </Box>
+  <Box Texture_name="" Rotation="-60" Position="-3.000000, -5.000000, -5.000000" Color="149, 255, 234">
+   <Options>
+    <Size Height="5" Lenght="5" Widght="5"/>
+    <VPS Vertex_per_height="5" Vertex_per_lenght="5" Vertex_per_widght="5"/>
+    <Other/>
+   </Options>
+  </Box>
+  <Box Texture_name="" Rotation="5" Position="5.000000, 5.000000, 5.000000" Color="0, 0, 255">
+   <Options>
+    <Size Height="5" Lenght="5" Widght="5"/>
+    <VPS Vertex_per_height="5" Vertex_per_lenght="5" Vertex_per_widght="5"/>
+    <Other/>
+   </Options>
+  </Box>
+ </Boxes>
+ <Empty/>
+</Map>

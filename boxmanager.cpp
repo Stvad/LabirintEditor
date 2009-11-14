@@ -96,7 +96,7 @@ bool BoxManager::Deserialize(const QDomElement& DomElement)
     if(!DomElement.isNull())
     {
          bResult = true;
-
+                boxes.clear();
                 QDomElement CurBoxNode = DomElement.firstChildElement("Box");
                 while(!CurBoxNode.isNull())
                 {
@@ -104,11 +104,7 @@ bool BoxManager::Deserialize(const QDomElement& DomElement)
                     Box tBox;
                     if(tBox.Deserialize(CurBoxNode))
                     {
-                        Box tmBox = BoxCreator::CreateBox(tBox.Widght, tBox.Height, tBox.Lenght, tBox.VertexPerWidght, tBox.VertexPerHeight, tBox.VertexPerLenght);
-                        tBox.m_indexes = tmBox.m_indexes;
-                        tBox.m_points = tmBox.m_points;
                         boxes.push_back(tBox);
-                        QApplication::aboutQt();
                     }
                     CurBoxNode = CurBoxNode.nextSiblingElement("Box");
                 }
@@ -116,6 +112,8 @@ bool BoxManager::Deserialize(const QDomElement& DomElement)
 
 
     }
+    qDebug()<<"size"<<boxes.size();
+    Show();
     return bResult;
 }
 
