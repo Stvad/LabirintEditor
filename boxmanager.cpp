@@ -44,7 +44,7 @@ void BoxManager::Show()
 {
     glInitNames();
     glPushName((uint)0);
-    for(int i = 0;i < boxes.size(); i++)
+    for(uint i = 0;i < boxes.size(); i++)
     {
         glLoadName(i);
         boxes[i].Show();
@@ -81,7 +81,7 @@ QDomElement BoxManager::Serialize(QDomDocument& DomDocument)
 {
     QDomElement BoxesNode = DomDocument.createElement("Boxes");
 
-    for(int i = 0; i < boxes.size(); i++)
+    for(uint i = 0; i < boxes.size(); i++)
     {
         BoxesNode.appendChild(boxes[i].Serialize(DomDocument));
     }
@@ -112,7 +112,6 @@ bool BoxManager::Deserialize(const QDomElement& DomElement)
 
 
     }
-    qDebug()<<"size"<<boxes.size();
     Show();
     return bResult;
 }

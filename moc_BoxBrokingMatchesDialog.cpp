@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'BoxBrokingMatchesDialog.h'
 **
-** Created: Thu Sep 17 20:45:31 2009
+** Created: Sat Nov 14 23:21:46 2009
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.0)
 **
 ** WARNING! All changes made in this file will be lost!

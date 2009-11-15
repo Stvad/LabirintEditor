@@ -29,22 +29,23 @@ Box::Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &i
     m_points = new Vertex[points.size()];
     m_indexes = new unsigned short[indexes.size()];
     m_IndexSize = indexes.size();
-    //int a=points.size(),b=indexes.size();
-    for (int i=0; i< points.size(); i++)
+
+    for (uint i=0; i< points.size(); i++)
     {
         m_points[i] = points[i];
     }
-    for (int j=0; j< indexes.size(); j++)
+    for (uint j=0; j< indexes.size(); j++)
     {
         m_indexes[j] = indexes[j];
     }
-   //this->Position = Position;
+
    this->Widght = Widght;
    this->Height = Height;
    this->Lenght = Lenght;
    this->VertexPerHeight = VertexPerHeight;
    this->VertexPerLenght = VertexPerLenght;
    this->VertexPerWidght = VertexPerWidght;
+
    AngleY = 0;
    Color = Qt::blue;
 }
@@ -108,23 +109,13 @@ bool Box::Deserialize(const QDomElement& DomElement)
 
     DomElement.attribute("Texture", "none");
 
-    QStringList sl = DomElement.attribute("Color", "127,127,127").split(",");
-    Color.setRed(sl[0].toInt(&bIsOk1));
-    Color.setGreen(sl[1].toInt(&bIsOk2));
-    Color.setBlue(sl[2].toInt(&bIsOk3));
-    if(bIsOk1 && bIsOk2 && bIsOk3)
-        nNodeCount++;
 
-    sl = DomElement.attribute("Position", "1,1,1").split(",");
+    QStringList sl = DomElement.attribute("Position", "1,1,1").split(",");
     Position.x = sl[0].toFloat(&bIsOk1);
     Position.y = sl[1].toFloat(&bIsOk2);
     Position.z = sl[2].toFloat(&bIsOk3);
     if(bIsOk1 && bIsOk2 && bIsOk3)
         nNodeCount++;
-
-    AngleY = DomElement.attribute("Rotation").toFloat(&bIsOk1);
-    if(bIsOk1)
-                nNodeCount++;
 
     QDomElement OptionsNode = DomElement.firstChildElement("Options");
     if(!OptionsNode.isNull())
@@ -159,6 +150,18 @@ bool Box::Deserialize(const QDomElement& DomElement)
     }
 
     *this = CreateBox(Widght, Height, Lenght, VertexPerWidght, VertexPerHeight, VertexPerLenght);
+
+    sl = DomElement.attribute("Color", "127,127,127").split(",");
+    Color.setRed(sl[0].toInt(&bIsOk1));
+    Color.setGreen(sl[1].toInt(&bIsOk2));
+    Color.setBlue(sl[2].toInt(&bIsOk3));
+    if(bIsOk1 && bIsOk2 && bIsOk3)
+        nNodeCount++;
+
+    AngleY = DomElement.attribute("Rotation").toFloat(&bIsOk1);
+    if(bIsOk1)
+                nNodeCount++;
+
     return nNodeCount == 5;
 }
 
