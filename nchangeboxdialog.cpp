@@ -31,7 +31,7 @@ void NChangeBoxDialog::slShowChangeBoxDialog()
 }
 void NChangeBoxDialog::ShowChangeBoxDialog(int N)
 {
-    //m_Box = BoxManager::GetAt(N);
+    //m_Box = ObjectManager::GetAt(N);
     index = N;
     ChangeBoxDialog ChDl;
     ChDl.exec();

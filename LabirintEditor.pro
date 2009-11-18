@@ -1,13 +1,15 @@
 # -------------------------------------------------
 # Project created by QtCreator 2009-06-11T10:50:39
 # -------------------------------------------------
-QT += opengl xml
+QT += opengl \
+    xml
 TARGET = LabirintEditor
 TEMPLATE = app
+CONFIG += debug_and_release
 SOURCES += myglwidget.cpp \
     mainwindow.cpp \
     main.cpp \
-    boxmanager.cpp \
+    objectmanager.cpp \
     boxcreator.cpp \
     box.cpp \
     point3d.cpp \
@@ -18,10 +20,12 @@ SOURCES += myglwidget.cpp \
     DeliteBoxDialog.cpp \
     BoxBrokingMatchesDialog.cpp \
     nchangeboxdialog.cpp \
-    xmlloader.cpp
+    xmlloader.cpp \
+    sector.cpp \
+    plain.cpp
 HEADERS += myglwidget.h \
     mainwindow.h \
-    boxmanager.h \
+    objectmanager.h \
     boxcreator.h \
     box.h \
     point3d.h \
@@ -32,7 +36,9 @@ HEADERS += myglwidget.h \
     DeliteBoxDialog.h \
     BoxBrokingMatchesDialog.h \
     nchangeboxdialog.h \
-    xmlloader.h
+    xmlloader.h \
+    sector.h \
+    plain.h
 OTHER_FILES += 
 FORMS += mainwindow.ui \
     AddBoxDialog.ui \

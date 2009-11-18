@@ -8,7 +8,7 @@
 #include <vector>
 #include "boxcreator.h"
 #include "box.h"
-#include "boxmanager.h"
+#include "objectmanager.h"
 #include <QString>
 #include <string.h>
 
@@ -53,7 +53,7 @@ private :
 
     BoxCreator m_BoxCreator;
     Box m_Box;
-
+    Plain mPlain;
 
 
 

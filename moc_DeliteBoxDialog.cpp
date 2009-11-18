@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'DeliteBoxDialog.h'
 **
-** Created: Sat Nov 14 23:21:42 2009
+** Created: Mon Nov 16 16:37:45 2009
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.0)
 **
 ** WARNING! All changes made in this file will be lost!

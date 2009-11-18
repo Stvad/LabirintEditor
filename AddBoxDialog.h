@@ -2,7 +2,7 @@
 #define ADDBOXDIALOG_H
 
 #include <QDialog>
-#include "boxmanager.h"
+#include "objectmanager.h"
 #include "box.h"
 #include "boxcreator.h"
 #include "point3d.h"

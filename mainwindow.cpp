@@ -74,11 +74,11 @@ void MainWindow::ShowChangeSettingsDlg()
 }
 void MainWindow::DeLastBox()
 {
-    BoxManager::RemoveLast();
+    ObjectManager::RemoveLastBox();
 }
 void MainWindow::DelAllBoxes()
 {
-    BoxManager::ClearAll();
+    ObjectManager::ClearAll();
 }
 
 void MainWindow::setXP()

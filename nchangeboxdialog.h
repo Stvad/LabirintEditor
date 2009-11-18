@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include "ChangeBoxDialog.h"
-#include "boxmanager.h"
+#include "objectmanager.h"
 #include "box.h"
 
 namespace Ui {

@@ -2,7 +2,7 @@
 #define XMLLOADER_H
 
 #include <QFile>
-#include "boxmanager.h"
+#include "objectmanager.h"
 #include <QtXml>
 
 class XmlLoader

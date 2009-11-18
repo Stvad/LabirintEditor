@@ -32,5 +32,5 @@ void DeliteBoxDialog::slDellBox()
 }
 void DeliteBoxDialog::DellBox(int N)
 {
-    BoxManager::Remove(N);
+    ObjectManager::Remove(N);
 }

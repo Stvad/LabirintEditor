@@ -26,11 +26,14 @@ MyGLWidget::MyGLWidget(QWidget *parent)
     m_Box = Box::CreateBox(10, 10, 5, 5, 5, 5);
     m_Box.Color = QColor(128, 128, 128);
     m_Box.Position = Position;
-    BoxManager::AddBox(m_Box);
+    ObjectManager::AddBox(m_Box);
+    //mPlain = Plain::CreatePlain(true, 1, 2, 1, 1, 3, 2);
+    mPlain.SetPosition(5, 5, 5);
+    ObjectManager::AddPlain(mPlain);
 
     ControlIsPressed = false;
     //m_Box = m_Box.CreateBox(Position, 10, 10, 5, 5, 5, 5);
-   // BoxManager::AddBox(Position, 10, 10, 5, 5, 5, 5);
+   // ObjectManager::AddBox(Position, 10, 10, 5, 5, 5, 5);
 }
 
 void MyGLWidget::paintGL()
@@ -54,7 +57,7 @@ void MyGLWidget::paintGL()
 
    // glInterleavedArrays(GL_T2F_N3F_V3F, 0, m_Box.m_points);
    // glDrawElements(GL_TRIANGLES, m_Box.m_IndexSize, GL_UNSIGNED_SHORT, m_Box.m_indexes);
-    BoxManager::Show();
+    ObjectManager::Show();
 
     /*
     glColor3f(1, 0, 0);
@@ -154,11 +157,11 @@ void MyGLWidget::ProcessSelection(int X, int Y)
     if (Hits >= 1)
                 //m_SelectedName = SelectionBuffer[3];
     {
-        BoxManager::SelectBox(SelectionBuffer[3]);
+        ObjectManager::SelectObject(SelectionBuffer[3]);
         //QMessageBox::aboutQt(0);
     }
     else
-                BoxManager::UnselectBox();
+                ObjectManager::UnselectObject();
     glMatrixMode(GL_PROJECTION);
     glPopMatrix();
     glMatrixMode(GL_MODELVIEW);
@@ -175,51 +178,51 @@ void MyGLWidget::keyPressEvent(QKeyEvent *event)
         break;
    /* case Qt::Key_Left:
          if (ControlIsPressed)
-            BoxManager::GetAt(SelectionBuffer[3]).Position.x -= 1;
+            ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.x -= 1;
             updateGL();
     case Qt::Key_Right:
          if (ControlIsPressed)
-            BoxManager::GetAt(SelectionBuffer[3]).Position.x += 1;
+            ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.x += 1;
             updateGL();*/
     case Qt::Key_Up:
          if (ControlIsPressed == true)
             {
             if (cTurn == "X")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.x += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.x += 1;
                 updateGL();
                 }
                 else
             if (cTurn == "Y")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.y += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.y += 1;
                 updateGL();
                 }
                 else
             if (cTurn == "Z")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.z += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.z += 1;
                 updateGL();
                 }
                 else
             if (cTurn == "XY")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.x += 1;
-                BoxManager::GetAt(SelectionBuffer[3]).Position.y += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.x += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.y += 1;
                 updateGL();
                 }
                 else
             if (cTurn == "YZ")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.y += 1;
-                BoxManager::GetAt(SelectionBuffer[3]).Position.z += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.y += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.z += 1;
                 updateGL();
                 }
                 else
             if (cTurn == "XZ")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.x += 1;
-                BoxManager::GetAt(SelectionBuffer[3]).Position.z += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.x += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.z += 1;
                 updateGL();
                 }
 
@@ -230,40 +233,40 @@ void MyGLWidget::keyPressEvent(QKeyEvent *event)
             {
              if (cTurn == "X")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.x -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.x -= 1;
                 updateGL();
                 }
                 else
             if (cTurn == "Y")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.y -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.y -= 1;
                 updateGL();
                 }
                 else
             if (cTurn == "Z")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.z -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.z -= 1;
                 updateGL();
                 }
                 else
             if (cTurn == "XY")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.x -= 1;
-                BoxManager::GetAt(SelectionBuffer[3]).Position.y -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.x -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.y -= 1;
                 updateGL();
                 }
                 else
             if (cTurn == "YZ")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.y -= 1;
-                BoxManager::GetAt(SelectionBuffer[3]).Position.z -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.y -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.z -= 1;
                 updateGL();
                 }
                 else
             if (cTurn == "XZ")
                 {
-                BoxManager::GetAt(SelectionBuffer[3]).Position.x -= 1;
-                BoxManager::GetAt(SelectionBuffer[3]).Position.z -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.x -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Position.z -= 1;
                 updateGL();
                 }
             }
@@ -271,14 +274,14 @@ void MyGLWidget::keyPressEvent(QKeyEvent *event)
     case Qt::Key_Left:
             if (ControlIsPressed == true)
             {
-                BoxManager::GetAt(SelectionBuffer[3]).AngleY -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).AngleY -= 1;
                 updateGL();
             }
          break;
     case Qt::Key_Right:
             if (ControlIsPressed == true)
             {
-                BoxManager::GetAt(SelectionBuffer[3]).AngleY += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).AngleY += 1;
                 updateGL();
             }
          break;

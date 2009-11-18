@@ -14,10 +14,10 @@ bool XmlLoader::LoadFile(QString sFileName)
         if(DomDoc.setContent(&File))
         {
             QDomElement Root = DomDoc.documentElement();
-            if(BoxManager::Deserialize(Root.firstChildElement("Boxes")))
+            if(ObjectManager::Deserialize(Root.firstChildElement("Boxes")))
             {
                 bResult = true;
-                BoxManager::Show();
+                ObjectManager::Show();
             }
         }
         File.close();
@@ -40,7 +40,7 @@ bool XmlLoader::SaveFile(QString sFileName)
         DomDocument.appendChild(Root);
 
 
-        QDomNode Node = BoxManager::Serialize(DomDocument);
+        QDomNode Node = ObjectManager::Serialize(DomDocument);
         if(Node.isNull())
         {
             //QMessageBox::warning(this, "Node", "Can't serialize!");
@@ -63,9 +63,9 @@ bool XmlLoader::SaveFile(QString sFileName)
 
     return bResult;
     /*
-    for (int i = 0; i < BoxManager::GetBoxesSize(); i++)
+    for (int i = 0; i < ObjectManager::GetBoxesSize(); i++)
     {
-        BoxManager::GetAt(i).Serialize();
+        ObjectManager::GetAt(i).Serialize();
     }
     //*/
 }

@@ -110,13 +110,6 @@ bool Box::Deserialize(const QDomElement& DomElement)
     DomElement.attribute("Texture", "none");
 
 
-    QStringList sl = DomElement.attribute("Position", "1,1,1").split(",");
-    Position.x = sl[0].toFloat(&bIsOk1);
-    Position.y = sl[1].toFloat(&bIsOk2);
-    Position.z = sl[2].toFloat(&bIsOk3);
-    if(bIsOk1 && bIsOk2 && bIsOk3)
-        nNodeCount++;
-
     QDomElement OptionsNode = DomElement.firstChildElement("Options");
     if(!OptionsNode.isNull())
     {
@@ -151,6 +144,15 @@ bool Box::Deserialize(const QDomElement& DomElement)
 
     *this = CreateBox(Widght, Height, Lenght, VertexPerWidght, VertexPerHeight, VertexPerLenght);
 
+    qDebug()<<"posxbox"<<Widght;
+
+    QStringList sl = DomElement.attribute("Position", "1,1,1").split(",");
+    Position.x = sl[0].toFloat(&bIsOk1);
+    Position.y = sl[1].toFloat(&bIsOk2);
+    Position.z = sl[2].toFloat(&bIsOk3);
+    if(bIsOk1 && bIsOk2 && bIsOk3)
+        nNodeCount++;
+
     sl = DomElement.attribute("Color", "127,127,127").split(",");
     Color.setRed(sl[0].toInt(&bIsOk1));
     Color.setGreen(sl[1].toInt(&bIsOk2));
@@ -175,7 +177,7 @@ Box Box::CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht
     zn = Lenght / VertexPerLenght;
     Point3D rPosition(0, 0, 0);
 
-    IVerticalPlane(rPosition, Widht, Height, Lenght, xn, yn, zn);
+   IVerticalPlane(rPosition, Widht, Height, Lenght, xn, yn, zn);
 
 
    IHorizontalPlane(rPosition, Widht, Height, Lenght, xn, yn, zn);
@@ -186,7 +188,7 @@ Box Box::CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht
 
    rPosition.y +=Height;
 
-    rPosition.z -=Lenght;
+   rPosition.z -=Lenght;
 
    IHorizontalPlaneNext(rPosition, Widht, Height, Lenght, xn, yn, zn);
 

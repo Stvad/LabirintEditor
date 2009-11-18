@@ -7,7 +7,7 @@ ChangeBoxDialog::ChangeBoxDialog(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->spinBox->setMinimum(1);
-    ui->spinBox->setMaximum(BoxManager::GetBoxesSize());
+    ui->spinBox->setMaximum(ObjectManager::GetBoxesSize());
     ChangeBoxDialog::update(1);
 
     connect(ui->spinBox, SIGNAL(valueChanged(int)), this, SLOT(update(int)));
@@ -38,17 +38,17 @@ void ChangeBoxDialog::slChngBox()
 }
 void ChangeBoxDialog::ChngBox(float x, float y, float z, float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght, float AngleY)
 {
-    //BoxManager::Remove(ui->spinBox->value());
+    //ObjectManager::Remove(ui->spinBox->value());
     //Point3D Position(x, y, z);
-    BoxManager::GetAt(ui->spinBox->value()) = BoxCreator::CreateBox(Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
-    BoxManager::GetAt(ui->spinBox->value()).Position = Point3D(x,y,z);
-    BoxManager::GetAt(ui->spinBox->value()).AngleY = AngleY;
-    //BoxManager::AddBox(m_Box);
+    ObjectManager::GetBoxAt(ui->spinBox->value()) = BoxCreator::CreateBox(Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
+    ObjectManager::GetBoxAt(ui->spinBox->value()).Position = Point3D(x,y,z);
+    ObjectManager::GetBoxAt(ui->spinBox->value()).AngleY = AngleY;
+    //ObjectManager::AddBox(m_Box);
     this->close();
 }
 void ChangeBoxDialog::update(int index)
 {
-    m_Box = BoxManager::GetAt(index -1);
+    m_Box = ObjectManager::GetBoxAt(index -1);
     ui->leAngle->setText(QString::number(m_Box.AngleY));
     ui->lePosX->setText(QString::number(m_Box.Position.x));
     ui->lePosY->setText(QString::number(m_Box.Position.y));

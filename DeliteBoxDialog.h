@@ -2,7 +2,7 @@
 #define DELITEBOXDIALOG_H
 
 #include <QDialog>
-#include "boxmanager.h"
+#include "objectmanager.h"
 
 namespace Ui {
     class DeliteBoxDialog;
