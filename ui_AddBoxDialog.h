@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading UI file 'AddBoxDialog.ui'
+** Form generated from reading ui file 'AddBoxDialog.ui'
 **
-** Created: Mon Nov 16 16:46:06 2009
-**      by: Qt User Interface Compiler version 4.6.0
+** Created: Wed Nov 18 16:27:36 2009
+**      by: Qt User Interface Compiler version 4.5.3
 **
-** WARNING! All changes made in this file will be lost when recompiling UI file!
+** WARNING! All changes made in this file will be lost when recompiling ui file!
 ********************************************************************************/
 
 #ifndef UI_ADDBOXDIALOG_H
@@ -149,6 +149,7 @@ public:
         lbWidhtPoints->setText(QApplication::translate("AddBoxDialog", "\320\250\320\270\321\200\320\270\320\275\321\226", 0, QApplication::UnicodeUTF8));
         lbHeightPoints->setText(QApplication::translate("AddBoxDialog", "\320\222\320\270\321\201\320\276\321\202\321\226", 0, QApplication::UnicodeUTF8));
         lbAngel->setText(QApplication::translate("AddBoxDialog", "\320\232\321\203\321\202", 0, QApplication::UnicodeUTF8));
+        Q_UNUSED(AddBoxDialog);
     } // retranslateUi
 
 };

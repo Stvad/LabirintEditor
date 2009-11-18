@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading UI file 'ChangeBoxDialog.ui'
+** Form generated from reading ui file 'ChangeBoxDialog.ui'
 **
-** Created: Mon Nov 16 16:46:06 2009
-**      by: Qt User Interface Compiler version 4.6.0
+** Created: Wed Nov 18 16:27:36 2009
+**      by: Qt User Interface Compiler version 4.5.3
 **
-** WARNING! All changes made in this file will be lost when recompiling UI file!
+** WARNING! All changes made in this file will be lost when recompiling ui file!
 ********************************************************************************/
 
 #ifndef UI_CHANGEBOXDIALOG_H
@@ -157,6 +157,7 @@ public:
         lbLenghtPoints->setText(QApplication::translate("ChangeBoxDialog", "\320\224\320\276\320\262\320\266\320\270\320\275\321\226", 0, QApplication::UnicodeUTF8));
         lbAngel->setText(QApplication::translate("ChangeBoxDialog", "\320\232\321\203\321\202", 0, QApplication::UnicodeUTF8));
         lbPosZ->setText(QApplication::translate("ChangeBoxDialog", "Z", 0, QApplication::UnicodeUTF8));
+        Q_UNUSED(ChangeBoxDialog);
     } // retranslateUi
 
 };

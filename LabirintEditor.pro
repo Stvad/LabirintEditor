@@ -22,7 +22,8 @@ SOURCES += myglwidget.cpp \
     nchangeboxdialog.cpp \
     xmlloader.cpp \
     sector.cpp \
-    plain.cpp
+    plain.cpp \
+    addplaindialog.cpp
 HEADERS += myglwidget.h \
     mainwindow.h \
     objectmanager.h \
@@ -38,11 +39,13 @@ HEADERS += myglwidget.h \
     nchangeboxdialog.h \
     xmlloader.h \
     sector.h \
-    plain.h
+    plain.h \
+    addplaindialog.h
 OTHER_FILES += 
 FORMS += mainwindow.ui \
     AddBoxDialog.ui \
     ChangeBoxDialog.ui \
     DeliteBoxDialog.ui \
     BoxBrokingMatchesDialog.ui \
-    nchangeboxdialog.ui
+    nchangeboxdialog.ui \
+    addplaindialog.ui

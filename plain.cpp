@@ -17,10 +17,12 @@ Plain::Plain(const std::vector<Sector> &sectors, float fSectorWidght, float fSec
 
 Plain Plain::CreatePlain(bool bType, float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
 {
+    Plain tPlain;
     if(!bType)
-        return CreateFloor(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
+         tPlain = CreateFloor(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
     else
-        return CreateCeiling(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
+         tPlain = CreateCeiling(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
+    return tPlain;
 }
 
 Plain Plain::CreateFloor(float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)

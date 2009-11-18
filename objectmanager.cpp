@@ -56,18 +56,18 @@ void ObjectManager::Show()
 {
     glInitNames();
     glPushName((uint)0);
+    uint i = 0;
 
-   /* for(uint i = 0; i < plains.size(); i++)
+    for(i; i < plains.size(); i++)
     {
         glLoadName(i);
-        boxes[i].Show();
-    }*/
-
-    for(uint i = 0; i < boxes.size(); i++)
-    {
-        glLoadName(i);
-        boxes[i].Show();
         plains[i].Show();
+    }
+
+    for(uint j = 0; j < boxes.size(); j++)
+    {
+        glLoadName(i+j);
+        boxes[j].Show();
     }
 }
 
