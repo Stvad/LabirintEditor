@@ -24,7 +24,7 @@ private slots:
     void slAddBox();
 private:
     Ui::AddBoxDialog *ui;
-    void AddBox(float x, float y, float z, float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght, float AngleY);
+    void AddBox(float x, float y, float z, float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght, float Angle);
 };
 
 #endif // ADDBOXDIALOG_H

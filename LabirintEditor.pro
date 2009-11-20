@@ -23,7 +23,8 @@ SOURCES += myglwidget.cpp \
     xmlloader.cpp \
     sector.cpp \
     plain.cpp \
-    addplaindialog.cpp
+    addplaindialog.cpp \
+    object.cpp
 HEADERS += myglwidget.h \
     mainwindow.h \
     objectmanager.h \
@@ -40,7 +41,8 @@ HEADERS += myglwidget.h \
     xmlloader.h \
     sector.h \
     plain.h \
-    addplaindialog.h
+    addplaindialog.h \
+    object.h
 OTHER_FILES += 
 FORMS += mainwindow.ui \
     AddBoxDialog.ui \

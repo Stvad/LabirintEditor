@@ -30,11 +30,11 @@ void AddBoxDialog::slAddBox()
 {
     AddBox(ui->lePosX->text().toFloat(), ui->lePosY->text().toFloat(), ui->lePosZ->text().toFloat(), ui->leWidht->text().toFloat(), ui->leHeight->text().toFloat(), ui->leLenght->text().toFloat(), ui->leWidhtPoints->text().toFloat(), ui->leHeightPoints->text().toFloat(), ui->leLenghtPoints->text().toFloat(), ui->leAngle->text().toFloat());
 }
-void AddBoxDialog::AddBox(float x, float y, float z, float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght, float AngleY)
+void AddBoxDialog::AddBox(float x, float y, float z, float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght, float Angle)
 {
     //Point3D Position(x, y, z);
     m_Box = Box::CreateBox(Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
     m_Box.Position = Point3D(x, y, z);
-    m_Box.AngleY = AngleY;
+    m_Box.Angle = Angle;
     ObjectManager::AddBox(m_Box);
 }

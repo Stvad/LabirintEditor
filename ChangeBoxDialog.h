@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::ChangeBoxDialog *ui;
-    void ChngBox(float x, float y, float z, float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght, float AngleY);
+    void ChngBox(float x, float y, float z, float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght, float Angle);
 };
 
 #endif // CHANGEBOXDIALOG_H

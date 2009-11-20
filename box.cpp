@@ -9,18 +9,14 @@ std::vector <unsigned short> Box::indexes;
 Box::Box()
    : Position()
 {
-    this->AngleX = 0;
-    this->AngleY = 0;
-    this->AngleZ = 0;
+    this->Angle = 0;
 }
 
-Box::Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &indexes, float AngleX, float AngleY, float AngleZ, Point3D Position)
+Box::Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &indexes, float Angle, Point3D Position)
 {
     //this->points = points;
     //this->indexes = indexes;
-    this->AngleX = AngleX;
-    this->AngleY = AngleY;
-    this->AngleZ = AngleZ;
+    this->Angle = Angle;
     this->Position = Position;
 }
 
@@ -46,15 +42,16 @@ Box::Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &i
    this->VertexPerLenght = VertexPerLenght;
    this->VertexPerWidght = VertexPerWidght;
 
-   AngleY = 0;
+   Angle = 0;
    Color = Qt::blue;
 }
+
 
 void Box::Show()
 {
     glPushMatrix();
     glTranslatef(Position.x, Position.y, Position.z);
-    glRotatef(AngleY, 0, 1, 0);
+    glRotatef(Angle, 0, 1, 0);
     glColor3f(Color.redF(), Color.greenF(), Color.blueF());
     glInterleavedArrays(GL_T2F_N3F_V3F, 0, m_points);
     glDrawElements(GL_TRIANGLES, m_IndexSize, GL_UNSIGNED_SHORT, m_indexes);
@@ -72,7 +69,7 @@ QDomElement Box::Serialize(QDomDocument& DomDocument)
     sColor.sprintf("%i, %i, %i", Color.red(), Color.green(), Color.blue());
 
     BoxNode.setAttribute("Position", sPosition);
-    BoxNode.setAttribute("Rotation", AngleY);
+    BoxNode.setAttribute("Rotation", Angle);
     BoxNode.setAttribute("Color", sColor);
     BoxNode.setAttribute("Texture_name", "");
 
@@ -160,7 +157,7 @@ bool Box::Deserialize(const QDomElement& DomElement)
     if(bIsOk1 && bIsOk2 && bIsOk3)
         nNodeCount++;
 
-    AngleY = DomElement.attribute("Rotation").toFloat(&bIsOk1);
+    Angle = DomElement.attribute("Rotation").toFloat(&bIsOk1);
     if(bIsOk1)
                 nNodeCount++;
 

@@ -11,7 +11,7 @@ class Box
 {
 public:
     Box();
-    Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &indexes, float AngleX, float AngleY, float AngleZ, Point3D Position);
+    Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &indexes, float Angle, Point3D Position);
     Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &indexes, float Widght, float Height, float Lenght, float VertexPerWidght, float VertexPerHeight, float VertexPerLenght);
     static Box CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght);
     void Show();
@@ -25,7 +25,7 @@ public:
 
     Point3D Position;
 
-    float AngleX, AngleY, AngleZ;
+    float Angle;
     QDomElement Serialize(QDomDocument& DomDocument);
     bool Deserialize(const QDomElement& DomElement);
 private:

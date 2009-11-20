@@ -274,14 +274,14 @@ void MyGLWidget::keyPressEvent(QKeyEvent *event)
     case Qt::Key_Left:
             if (ControlIsPressed == true)
             {
-                ObjectManager::GetBoxAt(SelectionBuffer[3]).AngleY -= 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Angle -= 1;
                 updateGL();
             }
          break;
     case Qt::Key_Right:
             if (ControlIsPressed == true)
             {
-                ObjectManager::GetBoxAt(SelectionBuffer[3]).AngleY += 1;
+                ObjectManager::GetBoxAt(SelectionBuffer[3]).Angle += 1;
                 updateGL();
             }
          break;
