@@ -1,500 +1,488 @@
 <!DOCTYPE QtCreatorProject>
 <qtcreator>
  <data>
-  <variable>RunConfiguration0-BaseEnvironmentBase</variable>
-  <value type="int">2</value>
- </data>
- <data>
   <variable>RunConfiguration0-CommandLineArguments</variable>
-  <valuelist type="QVariantList"/>
+  <valuelist type="QVariantList" />
  </data>
  <data>
   <variable>RunConfiguration0-ProFile</variable>
-  <value type="QString">LabirintEditor.pro</value>
+  <value type="QString" >LabirintEditor.pro</value>
  </data>
  <data>
   <variable>RunConfiguration0-RunConfiguration.name</variable>
-  <value type="QString">LabirintEditor</value>
+  <value type="QString" >LabirintEditor</value>
  </data>
  <data>
   <variable>RunConfiguration0-UseDyldImageSuffix</variable>
-  <value type="bool">false</value>
+  <value type="bool" >false</value>
  </data>
  <data>
   <variable>RunConfiguration0-UseTerminal</variable>
-  <value type="bool">false</value>
+  <value type="bool" >false</value>
  </data>
  <data>
   <variable>RunConfiguration0-UserEnvironmentChanges</variable>
-  <valuelist type="QVariantList"/>
+  <valuelist type="QVariantList" />
  </data>
  <data>
   <variable>RunConfiguration0-UserSetName</variable>
-  <value type="bool">false</value>
- </data>
- <data>
-  <variable>RunConfiguration0-UserSetWorkingDirectory</variable>
-  <value type="bool">false</value>
- </data>
- <data>
-  <variable>RunConfiguration0-UserWorkingDirectory</variable>
-  <value type="QString"></value>
+  <value type="bool" >false</value>
  </data>
  <data>
   <variable>RunConfiguration0-type</variable>
-  <value type="QString">Qt4ProjectManager.Qt4RunConfiguration</value>
+  <value type="QString" >Qt4ProjectManager.Qt4RunConfiguration</value>
  </data>
  <data>
   <variable>activeRunConfiguration</variable>
-  <value type="int">0</value>
+  <value type="int" >0</value>
  </data>
  <data>
   <variable>activebuildconfiguration</variable>
-  <value type="QString">Debug</value>
+  <value type="QString" >Debug</value>
  </data>
  <data>
   <variable>buildConfiguration-Debug</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
-   <value key="QtVersionId" type="int">0</value>
-   <value key="addQDumper" type=""></value>
-   <value key="buildConfiguration" type="int">0</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <value key="QtVersionId" type="int" >0</value>
+   <value key="addQDumper" type="" ></value>
+   <value key="buildConfiguration" type="int" >0</value>
   </valuemap>
  </data>
  <data>
   <variable>buildConfiguration-Release</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
-   <value key="QtVersionId" type="int">0</value>
-   <value key="addQDumper" type=""></value>
-   <value key="buildConfiguration" type="int">0</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
+   <value key="QtVersionId" type="int" >0</value>
+   <value key="addQDumper" type="" ></value>
+   <value key="buildConfiguration" type="int" >0</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Debug-buildstep0</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
-   <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">ALSA_PLUGINS_DIR=/usr/lib/alsa-lib</value>
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-lTzc5enJXQ,guid=ef9e9faf98281f91877e26414b03e8a3</value>
-    <value type="QString">DERBY_HOME=/opt/java/db</value>
-    <value type="QString">DESKTOP_SESSION=kde</value>
-    <value type="QString">DESKTOP_STARTUP_ID=</value>
-    <value type="QString">DISPLAY=:0.0</value>
-    <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-YXSCPK/S.gpg-agent:1841:1</value>
-    <value type="QString">GS_LIB=/home/stvad/.fonts</value>
-    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
-    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
-    <value type="QString">G_BROKEN_FILENAMES=1</value>
-    <value type="QString">HISTCONTROL=erasedups</value>
-    <value type="QString">HISTSIZE=1000</value>
-    <value type="QString">HOME=/home/stvad</value>
-    <value type="QString">INPUTRC=/etc/inputrc</value>
-    <value type="QString">J2SDKDIR=/opt/java</value>
-    <value type="QString">JAVA_HOME=/opt/java</value>
-    <value type="QString">KDE_FULL_SESSION=true</value>
-    <value type="QString">KDE_MULTIHEAD=false</value>
-    <value type="QString">KDE_SESSION_UID=1000</value>
-    <value type="QString">KDE_SESSION_VERSION=4</value>
-    <value type="QString">LANG=ru_UA.utf8</value>
-    <value type="QString">LC_COLLATE=C</value>
-    <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
-    <value type="QString">LESS=-R</value>
-    <value type="QString">LOGNAME=stvad</value>
-    <value type="QString">MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins</value>
-    <value type="QString">PATH=/usr/bin:/opt/wine/bin:/bin:/usr/bin:/sbin:/usr/sbin:/opt/java/bin:/opt/java/jre/bin:/opt/kde/bin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core:/opt/qt/bin:/home/stvad/bin</value>
-    <value type="QString">PKG_CONFIG_PATH=/usr/lib/pkgconfig:/opt/qt/lib/pkgconfig</value>
-    <value type="QString">PS3=> </value>
-    <value type="QString">PS4=+ </value>
-    <value type="QString">PWD=/home/stvad/Документы</value>
-    <value type="QString">QTDIR=/usr</value>
-    <value type="QString">QT_PLUGIN_PATH=/home/stvad/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">QT_XFT=true</value>
-    <value type="QString">SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/1899,unix/Stvad:/tmp/.ICE-unix/1899</value>
-    <value type="QString">SHELL=/bin/bash</value>
-    <value type="QString">SHLVL=1</value>
-    <value type="QString">SSH_AGENT_PID=1844</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-ZnlhTX1843/agent.1843</value>
-    <value type="QString">USER=stvad</value>
-    <value type="QString">WINDOWPATH=7</value>
-    <value type="QString">WINELOADER=/opt/wine/bin/wine</value>
-    <value type="QString">XCURSOR_THEME=Oxygen_Black</value>
-    <value type="QString">XDG_CACHE_HOME=/home/stvad/.cache</value>
-    <value type="QString">XDG_CONFIG_DIRS=/etc/xdg</value>
-    <value type="QString">XDG_CONFIG_HOME=/home/stvad/.config</value>
-    <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
-    <value type="QString">XDG_DATA_HOME=/home/stvad/.local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=c4704c31a55084eb66828a6c4acf394e-1258547361.482929-354204401</value>
-    <value type="QString">XDM_MANAGED=method=classic,auto</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALSA_PLUGINS_DIR=/usr/lib/alsa-lib</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-VelHmnmSpi,guid=91bfead2470c85854193b7b44b066b51</value>
+    <value type="QString" >DERBY_HOME=/opt/java/db</value>
+    <value type="QString" >DESKTOP_SESSION=kde</value>
+    <value type="QString" >DESKTOP_STARTUP_ID=</value>
+    <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/gpg-pbScCy/S.gpg-agent:1854:1</value>
+    <value type="QString" >GS_LIB=/home/stvad/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
+    <value type="QString" >G_BROKEN_FILENAMES=1</value>
+    <value type="QString" >HISTCONTROL=erasedups</value>
+    <value type="QString" >HISTSIZE=1000</value>
+    <value type="QString" >HOME=/home/stvad</value>
+    <value type="QString" >INPUTRC=/etc/inputrc</value>
+    <value type="QString" >J2SDKDIR=/opt/java</value>
+    <value type="QString" >JAVA_HOME=/opt/java</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=1000</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LANG=ru_UA.utf8</value>
+    <value type="QString" >LC_COLLATE=C</value>
+    <value type="QString" >LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
+    <value type="QString" >LESS=-R</value>
+    <value type="QString" >LOGNAME=stvad</value>
+    <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins</value>
+    <value type="QString" >PATH=/usr/bin:/opt/wine/bin:/bin:/usr/bin:/sbin:/usr/sbin:/opt/java/bin:/opt/java/jre/bin:/opt/kde/bin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core:/opt/qt/bin:/home/stvad/bin</value>
+    <value type="QString" >PKG_CONFIG_PATH=/usr/lib/pkgconfig:/opt/qt/lib/pkgconfig</value>
+    <value type="QString" >PS3=> </value>
+    <value type="QString" >PS4=+ </value>
+    <value type="QString" >PWD=/home/stvad/Документы</value>
+    <value type="QString" >QTDIR=/usr</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/stvad/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
+    <value type="QString" >QT_XFT=true</value>
+    <value type="QString" >SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/1912,unix/Stvad:/tmp/.ICE-unix/1912</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >SSH_AGENT_PID=1857</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/ssh-oDFnCl1856/agent.1856</value>
+    <value type="QString" >USER=stvad</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >WINELOADER=/opt/wine/bin/wine</value>
+    <value type="QString" >XCURSOR_THEME=Oxygen_Black</value>
+    <value type="QString" >XDG_CACHE_HOME=/home/stvad/.cache</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
+    <value type="QString" >XDG_CONFIG_HOME=/home/stvad/.config</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
+    <value type="QString" >XDG_DATA_HOME=/home/stvad/.local/share</value>
+    <value type="QString" >XDG_SESSION_COOKIE=c4704c31a55084eb66828a6c4acf394e-1258711887.423003-1126219507</value>
+    <value type="QString" >XDM_MANAGED=method=classic,auto</value>
    </valuelist>
-   <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">/home/stvad/source/c++/LabirintEditor/LabirintEditor.pro</value>
-    <value type="QString">-spec</value>
-    <value type="QString">/usr/share/qt/mkspecs/linux-g++-64</value>
-    <value type="QString">-r</value>
-    <value type="QString">CONFIG+=debug_and_release</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >/home/stvad/source/c++/LabirintEditor/LabirintEditor.pro</value>
+    <value type="QString" >-spec</value>
+    <value type="QString" >/usr/share/qt/mkspecs/linux-g++-64</value>
+    <value type="QString" >-r</value>
+    <value type="QString" >CONFIG+=debug_and_release</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString">/usr/bin/qmake</value>
-   <value key="abstractProcess.enabled" type="bool">false</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/stvad/source/c++/LabirintEditor</value>
-   <value key="buildConfiguration" type=""></value>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/qmake</value>
+   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/stvad/source/c++/LabirintEditor</value>
+   <value key="buildConfiguration" type="" ></value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Debug-buildstep1</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
-   <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">ALSA_PLUGINS_DIR=/usr/lib/alsa-lib</value>
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-lTzc5enJXQ,guid=ef9e9faf98281f91877e26414b03e8a3</value>
-    <value type="QString">DERBY_HOME=/opt/java/db</value>
-    <value type="QString">DESKTOP_SESSION=kde</value>
-    <value type="QString">DESKTOP_STARTUP_ID=</value>
-    <value type="QString">DISPLAY=:0.0</value>
-    <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-YXSCPK/S.gpg-agent:1841:1</value>
-    <value type="QString">GS_LIB=/home/stvad/.fonts</value>
-    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
-    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
-    <value type="QString">G_BROKEN_FILENAMES=1</value>
-    <value type="QString">HISTCONTROL=erasedups</value>
-    <value type="QString">HISTSIZE=1000</value>
-    <value type="QString">HOME=/home/stvad</value>
-    <value type="QString">INPUTRC=/etc/inputrc</value>
-    <value type="QString">J2SDKDIR=/opt/java</value>
-    <value type="QString">JAVA_HOME=/opt/java</value>
-    <value type="QString">KDE_FULL_SESSION=true</value>
-    <value type="QString">KDE_MULTIHEAD=false</value>
-    <value type="QString">KDE_SESSION_UID=1000</value>
-    <value type="QString">KDE_SESSION_VERSION=4</value>
-    <value type="QString">LANG=ru_UA.utf8</value>
-    <value type="QString">LC_COLLATE=C</value>
-    <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
-    <value type="QString">LESS=-R</value>
-    <value type="QString">LOGNAME=stvad</value>
-    <value type="QString">MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins</value>
-    <value type="QString">PATH=/usr/bin:/opt/wine/bin:/bin:/usr/bin:/sbin:/usr/sbin:/opt/java/bin:/opt/java/jre/bin:/opt/kde/bin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core:/opt/qt/bin:/home/stvad/bin</value>
-    <value type="QString">PKG_CONFIG_PATH=/usr/lib/pkgconfig:/opt/qt/lib/pkgconfig</value>
-    <value type="QString">PS3=> </value>
-    <value type="QString">PS4=+ </value>
-    <value type="QString">PWD=/home/stvad/Документы</value>
-    <value type="QString">QTDIR=/usr</value>
-    <value type="QString">QT_PLUGIN_PATH=/home/stvad/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">QT_XFT=true</value>
-    <value type="QString">SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/1899,unix/Stvad:/tmp/.ICE-unix/1899</value>
-    <value type="QString">SHELL=/bin/bash</value>
-    <value type="QString">SHLVL=1</value>
-    <value type="QString">SSH_AGENT_PID=1844</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-ZnlhTX1843/agent.1843</value>
-    <value type="QString">USER=stvad</value>
-    <value type="QString">WINDOWPATH=7</value>
-    <value type="QString">WINELOADER=/opt/wine/bin/wine</value>
-    <value type="QString">XCURSOR_THEME=Oxygen_Black</value>
-    <value type="QString">XDG_CACHE_HOME=/home/stvad/.cache</value>
-    <value type="QString">XDG_CONFIG_DIRS=/etc/xdg</value>
-    <value type="QString">XDG_CONFIG_HOME=/home/stvad/.config</value>
-    <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
-    <value type="QString">XDG_DATA_HOME=/home/stvad/.local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=c4704c31a55084eb66828a6c4acf394e-1258547361.482929-354204401</value>
-    <value type="QString">XDM_MANAGED=method=classic,auto</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ALSA_PLUGINS_DIR=/usr/lib/alsa-lib</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-VelHmnmSpi,guid=91bfead2470c85854193b7b44b066b51</value>
+    <value type="QString" >DERBY_HOME=/opt/java/db</value>
+    <value type="QString" >DESKTOP_SESSION=kde</value>
+    <value type="QString" >DESKTOP_STARTUP_ID=</value>
+    <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/gpg-pbScCy/S.gpg-agent:1854:1</value>
+    <value type="QString" >GS_LIB=/home/stvad/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
+    <value type="QString" >G_BROKEN_FILENAMES=1</value>
+    <value type="QString" >HISTCONTROL=erasedups</value>
+    <value type="QString" >HISTSIZE=1000</value>
+    <value type="QString" >HOME=/home/stvad</value>
+    <value type="QString" >INPUTRC=/etc/inputrc</value>
+    <value type="QString" >J2SDKDIR=/opt/java</value>
+    <value type="QString" >JAVA_HOME=/opt/java</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=1000</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LANG=ru_UA.utf8</value>
+    <value type="QString" >LC_COLLATE=C</value>
+    <value type="QString" >LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
+    <value type="QString" >LESS=-R</value>
+    <value type="QString" >LOGNAME=stvad</value>
+    <value type="QString" >MOZ_PLUGIN_PATH=/usr/lib/mozilla/plugins</value>
+    <value type="QString" >PATH=/usr/bin:/opt/wine/bin:/bin:/usr/bin:/sbin:/usr/sbin:/opt/java/bin:/opt/java/jre/bin:/opt/kde/bin:/usr/bin/perlbin/site:/usr/bin/perlbin/vendor:/usr/bin/perlbin/core:/opt/qt/bin:/home/stvad/bin</value>
+    <value type="QString" >PKG_CONFIG_PATH=/usr/lib/pkgconfig:/opt/qt/lib/pkgconfig</value>
+    <value type="QString" >PS3=> </value>
+    <value type="QString" >PS4=+ </value>
+    <value type="QString" >PWD=/home/stvad/Документы</value>
+    <value type="QString" >QTDIR=/usr</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/stvad/.kde4/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
+    <value type="QString" >QT_XFT=true</value>
+    <value type="QString" >SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/1912,unix/Stvad:/tmp/.ICE-unix/1912</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >SSH_AGENT_PID=1857</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/ssh-oDFnCl1856/agent.1856</value>
+    <value type="QString" >USER=stvad</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >WINELOADER=/opt/wine/bin/wine</value>
+    <value type="QString" >XCURSOR_THEME=Oxygen_Black</value>
+    <value type="QString" >XDG_CACHE_HOME=/home/stvad/.cache</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
+    <value type="QString" >XDG_CONFIG_HOME=/home/stvad/.config</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/opt/kde/share</value>
+    <value type="QString" >XDG_DATA_HOME=/home/stvad/.local/share</value>
+    <value type="QString" >XDG_SESSION_COOKIE=c4704c31a55084eb66828a6c4acf394e-1258711887.423003-1126219507</value>
+    <value type="QString" >XDM_MANAGED=method=classic,auto</value>
    </valuelist>
-   <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
-   <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">-w</value>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool" >false</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >-w</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
-   <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/stvad/source/c++/LabirintEditor</value>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/stvad/source/c++/LabirintEditor</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Debug-cleanstep0</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
-   <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">ANT_HOME=/usr/share/ant</value>
-    <value type="QString">CLASSPATH=.</value>
-    <value type="QString">CONFIG_PROTECT=/usr/share/config /usr/kde/3.5/share/config /usr/kde/3.5/env /usr/kde/3.5/shutdown</value>
-    <value type="QString">CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/texmf/web2c /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d /etc/revdep-rebuild</value>
-    <value type="QString">CVS_RSH=ssh</value>
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-BUxrnuYZBW,guid=8f9aff61531970776db2fee14b004c6b</value>
-    <value type="QString">DESKTOP_SESSION=KDE-4</value>
-    <value type="QString">DISPLAY=:0.0</value>
-    <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">EDITOR=/bin/nano</value>
-    <value type="QString">GDK_USE_XFT=1</value>
-    <value type="QString">GENERATION=2</value>
-    <value type="QString">GS_LIB=/home/stvad/.fonts</value>
-    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
-    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
-    <value type="QString">HG=/usr/bin/hg</value>
-    <value type="QString">HOME=/home/stvad</value>
-    <value type="QString">INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/info:/usr/share/info/emacs-22</value>
-    <value type="QString">JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
-    <value type="QString">JAVACC_HOME=/usr/share/javacc/</value>
-    <value type="QString">JAVA_HOME=/etc/java-config-2/current-system-vm</value>
-    <value type="QString">JDK_HOME=/etc/java-config-2/current-system-vm</value>
-    <value type="QString">KDE_FULL_SESSION=true</value>
-    <value type="QString">KDE_MULTIHEAD=false</value>
-    <value type="QString">KDE_SESSION_UID=777</value>
-    <value type="QString">KDE_SESSION_VERSION=4</value>
-    <value type="QString">LADSPA_PATH=/usr/lib64/ladspa</value>
-    <value type="QString">LANG=ru_UA.UTF-8</value>
-    <value type="QString">LC_NUMERIC=POSIX</value>
-    <value type="QString">LESS=-R -M --shift 5</value>
-    <value type="QString">LESSOPEN=|lesspipe.sh %s</value>
-    <value type="QString">LOGNAME=stvad</value>
-    <value type="QString">MALLOC_CHECK_=3</value>
-    <value type="QString">MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/man:/opt/blackdown-jdk-1.4.2.03/man:/etc/java-config/system-vm/man/:/usr/kde/3.5/share/man:/usr/qt/3/doc/man:/opt/opera/share/man</value>
-    <value type="QString">OPENGL_PROFILE=nvidia</value>
-    <value type="QString">PAGER=/usr/bin/less</value>
-    <value type="QString">PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.4.1:/opt/blackdown-jdk-1.4.2.03/bin:/opt/blackdown-jdk-1.4.2.03/jre/bin:/usr/kde/3.5/bin:/usr/qt/3/bin:/usr/lib64/subversion/bin:/usr/games/bin</value>
-    <value type="QString">PRELINK_PATH_MASK=/opt</value>
-    <value type="QString">PWD=/home/stvad</value>
-    <value type="QString">PYTHONDOCS=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
-    <value type="QString">PYTHONDOCS_2_6=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
-    <value type="QString">QMAKESPEC=linux-g++</value>
-    <value type="QString">QTDIR=/usr/share/qt4</value>
-    <value type="QString">QT_PLUGIN_PATH=/home/stvad/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
-    <value type="QString">SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString">SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/1931,unix/Stvad:/tmp/.ICE-unix/1931</value>
-    <value type="QString">SGML_CATALOG_FILES=/etc/sgml/sgml-docbook.cat:/etc/sgml/openjade-1.3.2.cat:/etc/sgml/xml-docbook-4.2.cat:/etc/sgml/xml-docbook-4.3.cat:/etc/sgml/xml-docbook-4.4.cat:/etc/sgml/xml-docbook-4.5.cat:/etc/sgml/sgml-ent.cat:/etc/sgml/xml-simple-docbook-1.0.cat:/etc/sgml/xml-simple-docbook-4.1.2.4.cat:/etc/sgml/xml-docbook-4.1.2.cat:/etc/sgml/sgml-docbook-3.0.cat:/etc/sgml/sgml-docbook-3.1.cat:/etc/sgml/sgml-docbook-4.0.cat:/etc/sgml/sgml-docbook-4.1.cat:/etc/sgml/sgml-lite.cat:/etc/sgml/dsssl-docbook-stylesheets.cat</value>
-    <value type="QString">SHELL=/bin/bash</value>
-    <value type="QString">SHLVL=1</value>
-    <value type="QString">STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
-    <value type="QString">TKABBER_SITE_PLUGINS=/usr/share/tkabber/site-plugins</value>
-    <value type="QString">USER=stvad</value>
-    <value type="QString">VMHANDLE=blackdown-jdk-1.4.2</value>
-    <value type="QString">WINDOWPATH=7</value>
-    <value type="QString">XCURSOR_THEME=Oxygen_Black</value>
-    <value type="QString">XDG_CONFIG_DIRS=/etc/xdg</value>
-    <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=74c5afca26d06ff4eacaea0149ab87cd-1258310762.937844-1225892784</value>
-    <value type="QString">XDM_MANAGED=method=classic</value>
-    <value type="QString">_=/usr/lib64/kde4/libexec/start_kdeinit_wrapper</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ANT_HOME=/usr/share/ant</value>
+    <value type="QString" >CLASSPATH=.</value>
+    <value type="QString" >CONFIG_PROTECT=/usr/share/config /usr/kde/3.5/share/config /usr/kde/3.5/env /usr/kde/3.5/shutdown</value>
+    <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/texmf/web2c /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d /etc/revdep-rebuild</value>
+    <value type="QString" >CVS_RSH=ssh</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-BUxrnuYZBW,guid=8f9aff61531970776db2fee14b004c6b</value>
+    <value type="QString" >DESKTOP_SESSION=KDE-4</value>
+    <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >EDITOR=/bin/nano</value>
+    <value type="QString" >GDK_USE_XFT=1</value>
+    <value type="QString" >GENERATION=2</value>
+    <value type="QString" >GS_LIB=/home/stvad/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
+    <value type="QString" >HG=/usr/bin/hg</value>
+    <value type="QString" >HOME=/home/stvad</value>
+    <value type="QString" >INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/info:/usr/share/info/emacs-22</value>
+    <value type="QString" >JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
+    <value type="QString" >JAVACC_HOME=/usr/share/javacc/</value>
+    <value type="QString" >JAVA_HOME=/etc/java-config-2/current-system-vm</value>
+    <value type="QString" >JDK_HOME=/etc/java-config-2/current-system-vm</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=777</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LADSPA_PATH=/usr/lib64/ladspa</value>
+    <value type="QString" >LANG=ru_UA.UTF-8</value>
+    <value type="QString" >LC_NUMERIC=POSIX</value>
+    <value type="QString" >LESS=-R -M --shift 5</value>
+    <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
+    <value type="QString" >LOGNAME=stvad</value>
+    <value type="QString" >MALLOC_CHECK_=3</value>
+    <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/man:/opt/blackdown-jdk-1.4.2.03/man:/etc/java-config/system-vm/man/:/usr/kde/3.5/share/man:/usr/qt/3/doc/man:/opt/opera/share/man</value>
+    <value type="QString" >OPENGL_PROFILE=nvidia</value>
+    <value type="QString" >PAGER=/usr/bin/less</value>
+    <value type="QString" >PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.4.1:/opt/blackdown-jdk-1.4.2.03/bin:/opt/blackdown-jdk-1.4.2.03/jre/bin:/usr/kde/3.5/bin:/usr/qt/3/bin:/usr/lib64/subversion/bin:/usr/games/bin</value>
+    <value type="QString" >PRELINK_PATH_MASK=/opt</value>
+    <value type="QString" >PWD=/home/stvad</value>
+    <value type="QString" >PYTHONDOCS=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
+    <value type="QString" >PYTHONDOCS_2_6=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
+    <value type="QString" >QMAKESPEC=linux-g++</value>
+    <value type="QString" >QTDIR=/usr/share/qt4</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/stvad/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
+    <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
+    <value type="QString" >SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/1931,unix/Stvad:/tmp/.ICE-unix/1931</value>
+    <value type="QString" >SGML_CATALOG_FILES=/etc/sgml/sgml-docbook.cat:/etc/sgml/openjade-1.3.2.cat:/etc/sgml/xml-docbook-4.2.cat:/etc/sgml/xml-docbook-4.3.cat:/etc/sgml/xml-docbook-4.4.cat:/etc/sgml/xml-docbook-4.5.cat:/etc/sgml/sgml-ent.cat:/etc/sgml/xml-simple-docbook-1.0.cat:/etc/sgml/xml-simple-docbook-4.1.2.4.cat:/etc/sgml/xml-docbook-4.1.2.cat:/etc/sgml/sgml-docbook-3.0.cat:/etc/sgml/sgml-docbook-3.1.cat:/etc/sgml/sgml-docbook-4.0.cat:/etc/sgml/sgml-docbook-4.1.cat:/etc/sgml/sgml-lite.cat:/etc/sgml/dsssl-docbook-stylesheets.cat</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
+    <value type="QString" >TKABBER_SITE_PLUGINS=/usr/share/tkabber/site-plugins</value>
+    <value type="QString" >USER=stvad</value>
+    <value type="QString" >VMHANDLE=blackdown-jdk-1.4.2</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XCURSOR_THEME=Oxygen_Black</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share</value>
+    <value type="QString" >XDG_SESSION_COOKIE=74c5afca26d06ff4eacaea0149ab87cd-1258310762.937844-1225892784</value>
+    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >_=/usr/lib64/kde4/libexec/start_kdeinit_wrapper</value>
    </valuelist>
-   <value key="abstractProcess.IgnoreReturnValue" type="bool">true</value>
-   <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">clean</value>
-    <value type="QString">-w</value>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool" >true</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >clean</value>
+    <value type="QString" >-w</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
-   <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/stvad/source/c++/LabirintEditor</value>
-   <value key="cleanConfig" type="bool">true</value>
-   <valuelist key="makeargs" type="QVariantList">
-    <value type="QString">clean</value>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/stvad/source/c++/LabirintEditor</value>
+   <value key="cleanConfig" type="bool" >true</value>
+   <valuelist key="makeargs" type="QVariantList" >
+    <value type="QString" >clean</value>
    </valuelist>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Release-buildstep0</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
-   <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">ANT_HOME=/usr/share/ant</value>
-    <value type="QString">CLASSPATH=.</value>
-    <value type="QString">CONFIG_PROTECT=/usr/share/config /usr/kde/3.5/share/config /usr/kde/3.5/env /usr/kde/3.5/shutdown</value>
-    <value type="QString">CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/texmf/web2c /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d /etc/revdep-rebuild</value>
-    <value type="QString">CVS_RSH=ssh</value>
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-qehZlUpHOg,guid=541c989722746fc1703f25fc4b01c227</value>
-    <value type="QString">DESKTOP_SESSION=KDE-4</value>
-    <value type="QString">DISPLAY=:0</value>
-    <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">EDITOR=/bin/nano</value>
-    <value type="QString">GDK_USE_XFT=1</value>
-    <value type="QString">GENERATION=2</value>
-    <value type="QString">GS_LIB=/home/stvad/.fonts</value>
-    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
-    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
-    <value type="QString">HG=/usr/bin/hg</value>
-    <value type="QString">HOME=/home/stvad</value>
-    <value type="QString">INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/info:/usr/share/info/emacs-22</value>
-    <value type="QString">JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
-    <value type="QString">JAVACC_HOME=/usr/share/javacc/</value>
-    <value type="QString">JAVA_HOME=/etc/java-config-2/current-system-vm</value>
-    <value type="QString">JDK_HOME=/etc/java-config-2/current-system-vm</value>
-    <value type="QString">KDE_FULL_SESSION=true</value>
-    <value type="QString">KDE_MULTIHEAD=false</value>
-    <value type="QString">KDE_SESSION_UID=777</value>
-    <value type="QString">KDE_SESSION_VERSION=4</value>
-    <value type="QString">LADSPA_PATH=/usr/lib64/ladspa</value>
-    <value type="QString">LANG=ru_UA.UTF-8</value>
-    <value type="QString">LANGUAGE=</value>
-    <value type="QString">LC_NUMERIC=POSIX</value>
-    <value type="QString">LESS=-R -M --shift 5</value>
-    <value type="QString">LESSOPEN=|lesspipe.sh %s</value>
-    <value type="QString">LOGNAME=stvad</value>
-    <value type="QString">MALLOC_CHECK_=3</value>
-    <value type="QString">MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/man:/opt/blackdown-jdk-1.4.2.03/man:/etc/java-config/system-vm/man/:/usr/kde/3.5/share/man:/usr/qt/3/doc/man:/opt/opera/share/man</value>
-    <value type="QString">OPENGL_PROFILE=nvidia</value>
-    <value type="QString">PAGER=/usr/bin/less</value>
-    <value type="QString">PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.4.1:/opt/blackdown-jdk-1.4.2.03/bin:/opt/blackdown-jdk-1.4.2.03/jre/bin:/usr/kde/3.5/bin:/usr/qt/3/bin:/usr/lib64/subversion/bin:/usr/games/bin</value>
-    <value type="QString">PRELINK_PATH_MASK=/opt</value>
-    <value type="QString">PWD=/home/stvad</value>
-    <value type="QString">PYTHONDOCS=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
-    <value type="QString">PYTHONDOCS_2_6=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
-    <value type="QString">QMAKESPEC=linux-g++</value>
-    <value type="QString">QTDIR=/usr/share/qt4</value>
-    <value type="QString">QT_PLUGIN_PATH=/home/stvad/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
-    <value type="QString">SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString">SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/2003,unix/Stvad:/tmp/.ICE-unix/2003</value>
-    <value type="QString">SGML_CATALOG_FILES=/etc/sgml/sgml-docbook.cat:/etc/sgml/openjade-1.3.2.cat:/etc/sgml/xml-docbook-4.2.cat:/etc/sgml/xml-docbook-4.3.cat:/etc/sgml/xml-docbook-4.4.cat:/etc/sgml/xml-docbook-4.5.cat:/etc/sgml/sgml-ent.cat:/etc/sgml/xml-simple-docbook-1.0.cat:/etc/sgml/xml-simple-docbook-4.1.2.4.cat:/etc/sgml/xml-docbook-4.1.2.cat:/etc/sgml/sgml-docbook-3.0.cat:/etc/sgml/sgml-docbook-3.1.cat:/etc/sgml/sgml-docbook-4.0.cat:/etc/sgml/sgml-docbook-4.1.cat:/etc/sgml/sgml-lite.cat:/etc/sgml/dsssl-docbook-stylesheets.cat</value>
-    <value type="QString">SHELL=/bin/bash</value>
-    <value type="QString">SHLVL=1</value>
-    <value type="QString">STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
-    <value type="QString">TKABBER_SITE_PLUGINS=/usr/share/tkabber/site-plugins</value>
-    <value type="QString">USER=stvad</value>
-    <value type="QString">VMHANDLE=blackdown-jdk-1.4.2</value>
-    <value type="QString">WINDOWPATH=7</value>
-    <value type="QString">XCURSOR_THEME=Oxygen_Black</value>
-    <value type="QString">XDG_CONFIG_DIRS=/etc/xdg</value>
-    <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=74c5afca26d06ff4eacaea0149ab87cd-1258406439.363298-508185405</value>
-    <value type="QString">XDM_MANAGED=method=classic</value>
-    <value type="QString">_=/usr/lib64/kde4/libexec/start_kdeinit_wrapper</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ANT_HOME=/usr/share/ant</value>
+    <value type="QString" >CLASSPATH=.</value>
+    <value type="QString" >CONFIG_PROTECT=/usr/share/config /usr/kde/3.5/share/config /usr/kde/3.5/env /usr/kde/3.5/shutdown</value>
+    <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/texmf/web2c /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d /etc/revdep-rebuild</value>
+    <value type="QString" >CVS_RSH=ssh</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-qehZlUpHOg,guid=541c989722746fc1703f25fc4b01c227</value>
+    <value type="QString" >DESKTOP_SESSION=KDE-4</value>
+    <value type="QString" >DISPLAY=:0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >EDITOR=/bin/nano</value>
+    <value type="QString" >GDK_USE_XFT=1</value>
+    <value type="QString" >GENERATION=2</value>
+    <value type="QString" >GS_LIB=/home/stvad/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
+    <value type="QString" >HG=/usr/bin/hg</value>
+    <value type="QString" >HOME=/home/stvad</value>
+    <value type="QString" >INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/info:/usr/share/info/emacs-22</value>
+    <value type="QString" >JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
+    <value type="QString" >JAVACC_HOME=/usr/share/javacc/</value>
+    <value type="QString" >JAVA_HOME=/etc/java-config-2/current-system-vm</value>
+    <value type="QString" >JDK_HOME=/etc/java-config-2/current-system-vm</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=777</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LADSPA_PATH=/usr/lib64/ladspa</value>
+    <value type="QString" >LANG=ru_UA.UTF-8</value>
+    <value type="QString" >LANGUAGE=</value>
+    <value type="QString" >LC_NUMERIC=POSIX</value>
+    <value type="QString" >LESS=-R -M --shift 5</value>
+    <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
+    <value type="QString" >LOGNAME=stvad</value>
+    <value type="QString" >MALLOC_CHECK_=3</value>
+    <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/man:/opt/blackdown-jdk-1.4.2.03/man:/etc/java-config/system-vm/man/:/usr/kde/3.5/share/man:/usr/qt/3/doc/man:/opt/opera/share/man</value>
+    <value type="QString" >OPENGL_PROFILE=nvidia</value>
+    <value type="QString" >PAGER=/usr/bin/less</value>
+    <value type="QString" >PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.4.1:/opt/blackdown-jdk-1.4.2.03/bin:/opt/blackdown-jdk-1.4.2.03/jre/bin:/usr/kde/3.5/bin:/usr/qt/3/bin:/usr/lib64/subversion/bin:/usr/games/bin</value>
+    <value type="QString" >PRELINK_PATH_MASK=/opt</value>
+    <value type="QString" >PWD=/home/stvad</value>
+    <value type="QString" >PYTHONDOCS=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
+    <value type="QString" >PYTHONDOCS_2_6=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
+    <value type="QString" >QMAKESPEC=linux-g++</value>
+    <value type="QString" >QTDIR=/usr/share/qt4</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/stvad/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
+    <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
+    <value type="QString" >SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/2003,unix/Stvad:/tmp/.ICE-unix/2003</value>
+    <value type="QString" >SGML_CATALOG_FILES=/etc/sgml/sgml-docbook.cat:/etc/sgml/openjade-1.3.2.cat:/etc/sgml/xml-docbook-4.2.cat:/etc/sgml/xml-docbook-4.3.cat:/etc/sgml/xml-docbook-4.4.cat:/etc/sgml/xml-docbook-4.5.cat:/etc/sgml/sgml-ent.cat:/etc/sgml/xml-simple-docbook-1.0.cat:/etc/sgml/xml-simple-docbook-4.1.2.4.cat:/etc/sgml/xml-docbook-4.1.2.cat:/etc/sgml/sgml-docbook-3.0.cat:/etc/sgml/sgml-docbook-3.1.cat:/etc/sgml/sgml-docbook-4.0.cat:/etc/sgml/sgml-docbook-4.1.cat:/etc/sgml/sgml-lite.cat:/etc/sgml/dsssl-docbook-stylesheets.cat</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
+    <value type="QString" >TKABBER_SITE_PLUGINS=/usr/share/tkabber/site-plugins</value>
+    <value type="QString" >USER=stvad</value>
+    <value type="QString" >VMHANDLE=blackdown-jdk-1.4.2</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XCURSOR_THEME=Oxygen_Black</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share</value>
+    <value type="QString" >XDG_SESSION_COOKIE=74c5afca26d06ff4eacaea0149ab87cd-1258406439.363298-508185405</value>
+    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >_=/usr/lib64/kde4/libexec/start_kdeinit_wrapper</value>
    </valuelist>
-   <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">/home/stvad/source/c++/LabirintEditor/LabirintEditor.pro</value>
-    <value type="QString">-spec</value>
-    <value type="QString">linux-g++</value>
-    <value type="QString">-r</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >/home/stvad/source/c++/LabirintEditor/LabirintEditor.pro</value>
+    <value type="QString" >-spec</value>
+    <value type="QString" >linux-g++</value>
+    <value type="QString" >-r</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString">/usr/bin/qmake</value>
-   <value key="abstractProcess.enabled" type="bool">false</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/stvad/source/c++/LabirintEditor</value>
-   <value key="buildConfiguration" type=""></value>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/qmake</value>
+   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/stvad/source/c++/LabirintEditor</value>
+   <value key="buildConfiguration" type="" ></value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Release-buildstep1</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
-   <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">ANT_HOME=/usr/share/ant</value>
-    <value type="QString">CLASSPATH=.</value>
-    <value type="QString">CONFIG_PROTECT=/usr/share/config /usr/kde/3.5/share/config /usr/kde/3.5/env /usr/kde/3.5/shutdown</value>
-    <value type="QString">CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/texmf/web2c /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d /etc/revdep-rebuild</value>
-    <value type="QString">CVS_RSH=ssh</value>
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-qehZlUpHOg,guid=541c989722746fc1703f25fc4b01c227</value>
-    <value type="QString">DESKTOP_SESSION=KDE-4</value>
-    <value type="QString">DISPLAY=:0</value>
-    <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">EDITOR=/bin/nano</value>
-    <value type="QString">GDK_USE_XFT=1</value>
-    <value type="QString">GENERATION=2</value>
-    <value type="QString">GS_LIB=/home/stvad/.fonts</value>
-    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
-    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
-    <value type="QString">HG=/usr/bin/hg</value>
-    <value type="QString">HOME=/home/stvad</value>
-    <value type="QString">INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/info:/usr/share/info/emacs-22</value>
-    <value type="QString">JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
-    <value type="QString">JAVACC_HOME=/usr/share/javacc/</value>
-    <value type="QString">JAVA_HOME=/etc/java-config-2/current-system-vm</value>
-    <value type="QString">JDK_HOME=/etc/java-config-2/current-system-vm</value>
-    <value type="QString">KDE_FULL_SESSION=true</value>
-    <value type="QString">KDE_MULTIHEAD=false</value>
-    <value type="QString">KDE_SESSION_UID=777</value>
-    <value type="QString">KDE_SESSION_VERSION=4</value>
-    <value type="QString">LADSPA_PATH=/usr/lib64/ladspa</value>
-    <value type="QString">LANG=ru_UA.UTF-8</value>
-    <value type="QString">LANGUAGE=</value>
-    <value type="QString">LC_NUMERIC=POSIX</value>
-    <value type="QString">LESS=-R -M --shift 5</value>
-    <value type="QString">LESSOPEN=|lesspipe.sh %s</value>
-    <value type="QString">LOGNAME=stvad</value>
-    <value type="QString">MALLOC_CHECK_=3</value>
-    <value type="QString">MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/man:/opt/blackdown-jdk-1.4.2.03/man:/etc/java-config/system-vm/man/:/usr/kde/3.5/share/man:/usr/qt/3/doc/man:/opt/opera/share/man</value>
-    <value type="QString">OPENGL_PROFILE=nvidia</value>
-    <value type="QString">PAGER=/usr/bin/less</value>
-    <value type="QString">PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.4.1:/opt/blackdown-jdk-1.4.2.03/bin:/opt/blackdown-jdk-1.4.2.03/jre/bin:/usr/kde/3.5/bin:/usr/qt/3/bin:/usr/lib64/subversion/bin:/usr/games/bin</value>
-    <value type="QString">PRELINK_PATH_MASK=/opt</value>
-    <value type="QString">PWD=/home/stvad</value>
-    <value type="QString">PYTHONDOCS=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
-    <value type="QString">PYTHONDOCS_2_6=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
-    <value type="QString">QMAKESPEC=linux-g++</value>
-    <value type="QString">QTDIR=/usr/share/qt4</value>
-    <value type="QString">QT_PLUGIN_PATH=/home/stvad/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
-    <value type="QString">SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString">SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/2003,unix/Stvad:/tmp/.ICE-unix/2003</value>
-    <value type="QString">SGML_CATALOG_FILES=/etc/sgml/sgml-docbook.cat:/etc/sgml/openjade-1.3.2.cat:/etc/sgml/xml-docbook-4.2.cat:/etc/sgml/xml-docbook-4.3.cat:/etc/sgml/xml-docbook-4.4.cat:/etc/sgml/xml-docbook-4.5.cat:/etc/sgml/sgml-ent.cat:/etc/sgml/xml-simple-docbook-1.0.cat:/etc/sgml/xml-simple-docbook-4.1.2.4.cat:/etc/sgml/xml-docbook-4.1.2.cat:/etc/sgml/sgml-docbook-3.0.cat:/etc/sgml/sgml-docbook-3.1.cat:/etc/sgml/sgml-docbook-4.0.cat:/etc/sgml/sgml-docbook-4.1.cat:/etc/sgml/sgml-lite.cat:/etc/sgml/dsssl-docbook-stylesheets.cat</value>
-    <value type="QString">SHELL=/bin/bash</value>
-    <value type="QString">SHLVL=1</value>
-    <value type="QString">STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
-    <value type="QString">TKABBER_SITE_PLUGINS=/usr/share/tkabber/site-plugins</value>
-    <value type="QString">USER=stvad</value>
-    <value type="QString">VMHANDLE=blackdown-jdk-1.4.2</value>
-    <value type="QString">WINDOWPATH=7</value>
-    <value type="QString">XCURSOR_THEME=Oxygen_Black</value>
-    <value type="QString">XDG_CONFIG_DIRS=/etc/xdg</value>
-    <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=74c5afca26d06ff4eacaea0149ab87cd-1258406439.363298-508185405</value>
-    <value type="QString">XDM_MANAGED=method=classic</value>
-    <value type="QString">_=/usr/lib64/kde4/libexec/start_kdeinit_wrapper</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ANT_HOME=/usr/share/ant</value>
+    <value type="QString" >CLASSPATH=.</value>
+    <value type="QString" >CONFIG_PROTECT=/usr/share/config /usr/kde/3.5/share/config /usr/kde/3.5/env /usr/kde/3.5/shutdown</value>
+    <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/texmf/web2c /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d /etc/revdep-rebuild</value>
+    <value type="QString" >CVS_RSH=ssh</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-qehZlUpHOg,guid=541c989722746fc1703f25fc4b01c227</value>
+    <value type="QString" >DESKTOP_SESSION=KDE-4</value>
+    <value type="QString" >DISPLAY=:0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >EDITOR=/bin/nano</value>
+    <value type="QString" >GDK_USE_XFT=1</value>
+    <value type="QString" >GENERATION=2</value>
+    <value type="QString" >GS_LIB=/home/stvad/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/stvad/.gtkrc-2.0::/home/stvad/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/stvad/.gtkrc::/home/stvad/.kde4/share/config/gtkrc</value>
+    <value type="QString" >HG=/usr/bin/hg</value>
+    <value type="QString" >HOME=/home/stvad</value>
+    <value type="QString" >INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/info:/usr/share/info/emacs-22</value>
+    <value type="QString" >JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
+    <value type="QString" >JAVACC_HOME=/usr/share/javacc/</value>
+    <value type="QString" >JAVA_HOME=/etc/java-config-2/current-system-vm</value>
+    <value type="QString" >JDK_HOME=/etc/java-config-2/current-system-vm</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=777</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LADSPA_PATH=/usr/lib64/ladspa</value>
+    <value type="QString" >LANG=ru_UA.UTF-8</value>
+    <value type="QString" >LANGUAGE=</value>
+    <value type="QString" >LC_NUMERIC=POSIX</value>
+    <value type="QString" >LESS=-R -M --shift 5</value>
+    <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
+    <value type="QString" >LOGNAME=stvad</value>
+    <value type="QString" >MALLOC_CHECK_=3</value>
+    <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.4.1/man:/opt/blackdown-jdk-1.4.2.03/man:/etc/java-config/system-vm/man/:/usr/kde/3.5/share/man:/usr/qt/3/doc/man:/opt/opera/share/man</value>
+    <value type="QString" >OPENGL_PROFILE=nvidia</value>
+    <value type="QString" >PAGER=/usr/bin/less</value>
+    <value type="QString" >PATH=/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.4.1:/opt/blackdown-jdk-1.4.2.03/bin:/opt/blackdown-jdk-1.4.2.03/jre/bin:/usr/kde/3.5/bin:/usr/qt/3/bin:/usr/lib64/subversion/bin:/usr/games/bin</value>
+    <value type="QString" >PRELINK_PATH_MASK=/opt</value>
+    <value type="QString" >PWD=/home/stvad</value>
+    <value type="QString" >PYTHONDOCS=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
+    <value type="QString" >PYTHONDOCS_2_6=/usr/share/doc/python-docs-2.6.2-r1/html/library</value>
+    <value type="QString" >QMAKESPEC=linux-g++</value>
+    <value type="QString" >QTDIR=/usr/share/qt4</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/stvad/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
+    <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
+    <value type="QString" >SESSION_MANAGER=local/Stvad:@/tmp/.ICE-unix/2003,unix/Stvad:/tmp/.ICE-unix/2003</value>
+    <value type="QString" >SGML_CATALOG_FILES=/etc/sgml/sgml-docbook.cat:/etc/sgml/openjade-1.3.2.cat:/etc/sgml/xml-docbook-4.2.cat:/etc/sgml/xml-docbook-4.3.cat:/etc/sgml/xml-docbook-4.4.cat:/etc/sgml/xml-docbook-4.5.cat:/etc/sgml/sgml-ent.cat:/etc/sgml/xml-simple-docbook-1.0.cat:/etc/sgml/xml-simple-docbook-4.1.2.4.cat:/etc/sgml/xml-docbook-4.1.2.cat:/etc/sgml/sgml-docbook-3.0.cat:/etc/sgml/sgml-docbook-3.1.cat:/etc/sgml/sgml-docbook-4.0.cat:/etc/sgml/sgml-docbook-4.1.cat:/etc/sgml/sgml-lite.cat:/etc/sgml/dsssl-docbook-stylesheets.cat</value>
+    <value type="QString" >SHELL=/bin/bash</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
+    <value type="QString" >TKABBER_SITE_PLUGINS=/usr/share/tkabber/site-plugins</value>
+    <value type="QString" >USER=stvad</value>
+    <value type="QString" >VMHANDLE=blackdown-jdk-1.4.2</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XCURSOR_THEME=Oxygen_Black</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share</value>
+    <value type="QString" >XDG_SESSION_COOKIE=74c5afca26d06ff4eacaea0149ab87cd-1258406439.363298-508185405</value>
+    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >_=/usr/lib64/kde4/libexec/start_kdeinit_wrapper</value>
    </valuelist>
-   <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
-   <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">-w</value>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool" >false</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >-w</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
-   <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/stvad/source/c++/LabirintEditor</value>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/stvad/source/c++/LabirintEditor</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Release-cleanstep0</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfigurations</variable>
-  <valuelist type="QVariantList">
-   <value type="QString">Debug</value>
-   <value type="QString">Release</value>
+  <valuelist type="QVariantList" >
+   <value type="QString" >Debug</value>
+   <value type="QString" >Release</value>
   </valuelist>
  </data>
  <data>
   <variable>buildstep0</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString"></value>
-   <value key="mkspec" type="QString"></value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
+   <value key="mkspec" type="QString" ></value>
   </valuemap>
  </data>
  <data>
   <variable>buildstep1</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString"></value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
   </valuemap>
  </data>
  <data>
   <variable>buildsteps</variable>
-  <valuelist type="QVariantList">
-   <value type="QString">trolltech.qt4projectmanager.qmake</value>
-   <value type="QString">trolltech.qt4projectmanager.make</value>
+  <valuelist type="QVariantList" >
+   <value type="QString" >trolltech.qt4projectmanager.qmake</value>
+   <value type="QString" >trolltech.qt4projectmanager.make</value>
   </valuelist>
  </data>
  <data>
   <variable>cleanstep0</variable>
-  <valuemap type="QVariantMap">
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString"></value>
-   <value key="clean" type="bool">true</value>
+  <valuemap type="QVariantMap" >
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
+   <value key="clean" type="bool" >true</value>
   </valuemap>
  </data>
  <data>
   <variable>cleansteps</variable>
-  <valuelist type="QVariantList">
-   <value type="QString">trolltech.qt4projectmanager.make</value>
+  <valuelist type="QVariantList" >
+   <value type="QString" >trolltech.qt4projectmanager.make</value>
   </valuelist>
  </data>
  <data>
   <variable>defaultFileEncoding</variable>
-  <value type="QByteArray">System</value>
+  <value type="QByteArray" >System</value>
  </data>
  <data>
   <variable>project</variable>
-  <valuemap type="QVariantMap"/>
+  <valuemap type="QVariantMap" />
  </data>
 </qtcreator>

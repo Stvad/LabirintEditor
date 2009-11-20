@@ -19,8 +19,8 @@ public:
     QColor Color;
 
     void Show();
-    virtual QDomElement Serialize() = 0;
-    virtual bool Deserialize() = 0;
+    virtual QDomElement Serialize();
+    virtual bool Deserialize();
 
 private:
     static float x;

@@ -1,10 +1,10 @@
 #include "box.h"
 
-float Box::x = 0;
-float Box::y = 0;
-float Box::z = 0;
-std::vector <Vertex> Box::points;
-std::vector <unsigned short> Box::indexes;
+float Object::x = 0;
+float Object::y = 0;
+float Object::z = 0;
+std::vector <Vertex> Object::points;
+std::vector <unsigned short> Object::indexes;
 
 Box::Box()
    : Position()
@@ -47,7 +47,7 @@ Box::Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &i
 }
 
 
-void Box::Show()
+/*void Box::Show()
 {
     glPushMatrix();
     glTranslatef(Position.x, Position.y, Position.z);
@@ -57,7 +57,7 @@ void Box::Show()
     glDrawElements(GL_TRIANGLES, m_IndexSize, GL_UNSIGNED_SHORT, m_indexes);
     glPopMatrix();
 
-}
+}*/
 
 QDomElement Box::Serialize(QDomDocument& DomDocument)
 {
@@ -164,7 +164,7 @@ bool Box::Deserialize(const QDomElement& DomElement)
     return nNodeCount == 5;
 }
 
-Box Box::CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght)
+Box* Box::CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght)
 {
     points.clear();
     indexes.clear();

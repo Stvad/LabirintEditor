@@ -36,5 +36,5 @@ void AddBoxDialog::AddBox(float x, float y, float z, float Widht, float Height, 
     m_Box = Box::CreateBox(Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
     m_Box.Position = Point3D(x, y, z);
     m_Box.Angle = Angle;
-    ObjectManager::AddBox(m_Box);
+    ObjectManager::AddOb(&m_Box);
 }

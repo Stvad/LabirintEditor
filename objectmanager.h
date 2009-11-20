@@ -20,7 +20,7 @@ public:
   static  void RemoveLastBox();
   static  void RemoveLastPlain();
   static  void Remove(int pos);
-  static  void AddBox(Box);
+  static  void AddObject(Object* NewObject);
   static  void AddPlain(Plain);
   static Box& GetBoxAt(int nIndex);
   static Plain& GetPlainAt(int nIndex);
@@ -32,7 +32,7 @@ public:
   static bool Deserialize(const QDomElement& DomElement);
 
 protected:
- static std::vector <Box> boxes;
+ static std::vector <Object*> boxes;
  static std::vector <Plain> plains;
  static int m_IndexOfSelectedObject;    // индекс текущего выделенного бокса
  //Box TempBox;

@@ -1,7 +1,7 @@
 #include "objectmanager.h"
 
 //static Box TempBox;
-std::vector <Box> ObjectManager::boxes;
+std::vector <Object&> ObjectManager::boxes;
 std::vector <Plain> ObjectManager::plains;
 ObjectManager* ObjectManager::m_pInstance = NULL;
 int ObjectManager::m_IndexOfSelectedObject = -1;
@@ -21,9 +21,9 @@ ObjectManager* ObjectManager::GetInstance()
     return m_pInstance;
 }
 
-void ObjectManager::AddBox(Box NewBox)
+void ObjectManager::AddObject(Object* NewObject)
 {
-    boxes.push_back(NewBox);
+    boxes.push_back(NewObject);
 }
 
 void ObjectManager::AddPlain(Plain NewPlain)

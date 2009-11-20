@@ -4,7 +4,7 @@ Plain::Plain()
 {
 }
 
-Plain::Plain(const std::vector<Sector> &sectors, float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
+Plain::Plain(const std::vector<Sector> &sectors, float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors, bool bType)
 {
     this->sectors = sectors;
     this->fSectorWidght = fSectorWidght;
@@ -13,6 +13,7 @@ Plain::Plain(const std::vector<Sector> &sectors, float fSectorWidght, float fSec
     this->fVertexPerLenght = fVertexPerLenght;
     this->nWidghtSectors = nWidghtSectors;
     this->nLenghtSectors = nLenghtSectors;
+    this->bType = bType;
 }
 
 Plain Plain::CreatePlain(bool bType, float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
@@ -70,7 +71,7 @@ Plain Plain::CreateFloor(float fSectorWidght, float fSectorLenght, float fVertex
                     }
             sectors.push_back(Sector(points, indexes, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, Point3D(sx, Position.y, sz)));
         }
-    return Plain(sectors, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
+    return Plain(sectors, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors, false);
 }
 
 Plain Plain::CreateCeiling(float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
@@ -117,7 +118,7 @@ Plain Plain::CreateCeiling(float fSectorWidght, float fSectorLenght, float fVert
 
             sectors.push_back(Sector(points, indexes, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, Point3D(sx, Position.y, sz)));
         }
-    return Plain(sectors, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
+    return Plain(sectors, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors, true);
 }
 
 void Plain::Show()
@@ -146,4 +147,106 @@ void Plain::SetPosition(float x, float y, float z)
     }
     Position = Point3D(x, y, z);
 
+}
+
+QDomElement Plain::Serialize(QDomDocument& DomDocument)
+{
+    QDomElement PlainNode = DomDocument.createElement("Plain");
+
+    QString sPosition, sColor;
+    sPosition.sprintf("%f, %f, %f", Position.x, Position.y, Position.z);
+
+    sColor.sprintf("%i, %i, %i", Color.red(), Color.green(), Color.blue());
+
+    PlainNode.setAttribute("Position", sPosition);
+    PlainNode.setAttribute("Rotation", Angle);
+    PlainNode.setAttribute("Color", sColor);
+    PlainNode.setAttribute("PlainType", bType);
+    PlainNode.setAttribute("Texture_name", "");
+
+    QDomElement OptionsNode = DomDocument.createElement("Options");
+
+    QDomElement SizeNode = DomDocument.createElement("Size");
+
+    SizeNode.setAttribute("Widght", Widght);
+    SizeNode.setAttribute("Lenght", Lenght);
+
+    QDomElement VpsNode = DomDocument.createElement("VPS");
+
+    VpsNode.setAttribute("Vertex_per_widght", VertexPerWidght);
+    VpsNode.setAttribute("Vertex_per_lenght", VertexPerLenght);
+
+    QDomElement OtherOptionsNode = DomDocument.createElement("Other");
+
+    OptionsNode.appendChild(SizeNode);
+    OptionsNode.appendChild(VpsNode);
+    OptionsNode.appendChild(OtherOptionsNode);
+
+    PlainNode.appendChild(OptionsNode);
+
+    return BoxNode;
+}
+
+bool Plain::Deserialize(const QDomElement& DomElement)
+{
+    if(DomElement.tagName() != "Plain") return false;
+    int nNodeCount = 0;
+    bool bIsOk1, bIsOk2, bIsOk3;
+
+    DomElement.attribute("Texture", "none");
+
+
+    QDomElement OptionsNode = DomElement.firstChildElement("Options");
+    if(!OptionsNode.isNull())
+    {
+        QDomElement SizeNode = OptionsNode.firstChildElement("Size");
+
+        if(!SizeNode.isNull())
+        {
+            Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
+            Lenght = SizeNode.attribute("Lenght").toFloat(&bIsOk2);
+            if(bIsOk1 && bIsOk2)
+                nNodeCount++;
+        }
+
+        QDomElement VpsNode = OptionsNode.firstChildElement("VPS");
+        if(!SizeNode.isNull())
+        {
+            VertexPerWidght = VpsNode.attribute("Vertex_per_widght").toFloat(&bIsOk1);
+            VertexPerLenght = VpsNode.attribute("Vertex_per_lenght").toFloat(&bIsOk2);
+            if(bIsOk1 && bIsOk2)
+                nNodeCount++;
+        }
+
+
+        QDomElement OtherNode = OptionsNode.firstChildElement("Other");
+        if(!OtherNode.isNull())
+        {
+
+        }
+    }
+
+    //if (DomElement.attribute(PlainType));
+
+    *this = CreatePlain(Widght, Height, Lenght, VertexPerWidght, VertexPerHeight, VertexPerLenght);
+
+    QStringList sl = DomElement.attribute("Position", "1,1,1").split(",");
+    Position.x = sl[0].toFloat(&bIsOk1);
+    Position.y = sl[1].toFloat(&bIsOk2);
+    Position.z = sl[2].toFloat(&bIsOk3);
+    if(bIsOk1 && bIsOk2 && bIsOk3)
+        nNodeCount++;
+
+    sl = DomElement.attribute("Color", "127,127,127").split(",");
+    Color.setRed(sl[0].toInt(&bIsOk1));
+    Color.setGreen(sl[1].toInt(&bIsOk2));
+    Color.setBlue(sl[2].toInt(&bIsOk3));
+    if(bIsOk1 && bIsOk2 && bIsOk3)
+        nNodeCount++;
+
+    Angle = DomElement.attribute("Rotation").toFloat(&bIsOk1);
+    if(bIsOk1)
+                nNodeCount++;
+
+    return nNodeCount == 5;
 }

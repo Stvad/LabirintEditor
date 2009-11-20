@@ -23,13 +23,15 @@ MyGLWidget::MyGLWidget(QWidget *parent)
 
     Point3D Position(0, 0, 0);
 
-    m_Box = Box::CreateBox(10, 10, 5, 5, 5, 5);
-    m_Box.Color = QColor(128, 128, 128);
-    m_Box.Position = Position;
-    ObjectManager::AddBox(m_Box);
     mPlain = Plain::CreatePlain(true, 1, 2, 1, 1, 3, 2);
     mPlain.SetPosition(5, 5, 5);
     ObjectManager::AddPlain(mPlain);
+    m_Box = new Box;
+    m_Box = Box::CreateBox(10, 10, 5, 5, 5, 5);
+    m_Box->Color = QColor(128, 128, 128);
+    m_Box->Position = Position;
+    ObjectManager::AddObject(m_Box);
+
 
     ControlIsPressed = false;
     //m_Box = m_Box.CreateBox(Position, 10, 10, 5, 5, 5, 5);
@@ -116,10 +118,6 @@ void MyGLWidget::mousePressEvent(QMouseEvent *pe)
 }
 //*/
 
-void MyGLWidget::mouseReleaseEvent(QMouseEvent *re)
-{
-    
-}
 
 /*
 void MyGLWidget::mouseMoveEvent(QMouseEvent *pe)

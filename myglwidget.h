@@ -28,7 +28,6 @@ protected:
     virtual void resizeGL(int nWidht, int nHeight);
     void ProcessSelection(int X, int Y);
     virtual void mouseDoubleClickEvent(QMouseEvent *pe);
-    virtual void mouseReleaseEvent(QMouseEvent *re);
     //virtual void mouseMoveEvent(QMouseEvent *pe);
     //virtual void mousePressEvent(QMouseEvent *pe);
     void keyPressEvent(QKeyEvent *event);
@@ -52,7 +51,7 @@ private :
     float yRotate;
 
     BoxCreator m_BoxCreator;
-    Box m_Box;
+    Box* m_Box;
     Plain mPlain;
 
 
