@@ -14,7 +14,7 @@ public:
     Box();
     Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &indexes, float Angle, Point3D Position);
     Box(const std::vector<Vertex> &points, const std::vector<unsigned short> &indexes, float Widght, float Height, float Lenght, float VertexPerWidght, float VertexPerHeight, float VertexPerLenght);
-    static Box* CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght);
+    void CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght);
     //void Show();
 
     //Vertex *m_points;
@@ -35,12 +35,12 @@ private:
     //static float z;
    // static std::vector <Vertex> points;
     //static std::vector <unsigned short> indexes;
-    static void IHorizontalPlane(Point3D Position, float Widht, float Lenght, float Height, float xn, float yn, float zn);
-    static void IVerticalPlane(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
-    static void IBokovPlane(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
-    static void IHorizontalPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
-    static void IVerticalPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
-    static void IBokovPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
+    void IHorizontalPlane(Point3D Position, float Widht, float Lenght, float Height, float xn, float yn, float zn);
+    void IVerticalPlane(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
+    void IBokovPlane(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
+    void IHorizontalPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
+    void IVerticalPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
+    void IBokovPlaneNext(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn);
 };
 
 #endif // BOX_H

@@ -164,8 +164,15 @@ bool Box::Deserialize(const QDomElement& DomElement)
     return nNodeCount == 5;
 }
 
-Box* Box::CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght)
+void Box::CreateBox(float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght)
 {
+   this->Widght = Widght;
+   this->Height = Height;
+   this->Lenght = Lenght;
+   this->VertexPerHeight = VertexPerHeight;
+   this->VertexPerLenght = VertexPerLenght;
+   this->VertexPerWidght = VertexPerWidght;
+
     points.clear();
     indexes.clear();
     float xn, yn, zn;
@@ -197,7 +204,20 @@ Box* Box::CreateBox(float Widht, float Height, float Lenght, float VertexPerWidh
 
    IBokovPlaneNext(rPosition, Widht, Height, Lenght, xn, yn, zn);
 
-   return Box(points, indexes, Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
+   m_points = new Vertex[points.size()];
+    m_indexes = new unsigned short[indexes.size()];
+    m_IndexSize = indexes.size();
+
+    for (uint i=0; i< points.size(); i++)
+    {
+        m_points[i] = points[i];
+    }
+    for (uint j=0; j< indexes.size(); j++)
+    {
+        m_indexes[j] = indexes[j];
+    }
+
+   //return Box(points, indexes, Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
 }
 
 void Box::IVerticalPlane(Point3D Position, float Widht, float Height, float Lenght, float xn, float yn, float zn)

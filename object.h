@@ -23,11 +23,11 @@ public:
     virtual bool Deserialize();
 
 private:
-    static float x;
-    static float y;
-    static float z;
-    static std::vector <Vertex> points;
-    static std::vector <unsigned short> indexes;
+    float x;
+    float y;
+    float z;
+    std::vector <Vertex> points;
+    std::vector <unsigned short> indexes;
 };
 
 #endif // OBJECT_H

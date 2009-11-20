@@ -27,7 +27,7 @@ MyGLWidget::MyGLWidget(QWidget *parent)
     mPlain.SetPosition(5, 5, 5);
     ObjectManager::AddPlain(mPlain);
     m_Box = new Box;
-    m_Box = Box::CreateBox(10, 10, 5, 5, 5, 5);
+    m_Box->CreateBox(10, 10, 5, 5, 5, 5);
     m_Box->Color = QColor(128, 128, 128);
     m_Box->Position = Position;
     ObjectManager::AddObject(m_Box);
