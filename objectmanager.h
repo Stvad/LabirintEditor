@@ -22,7 +22,7 @@ public:
   static  void Remove(int pos);
   static  void AddObject(Object* NewObject);
   static  void AddPlain(Plain);
-  static Box& GetBoxAt(int nIndex);
+  static Object* GetBoxAt(int nIndex);
   static Plain& GetPlainAt(int nIndex);
   static int GetBoxesSize();
   static int GetPlainsSize();

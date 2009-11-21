@@ -8,7 +8,7 @@
 #include <QtXml>
 #include "object.h"
 
-class Box : private Object
+class Box : public Object
 {
 public:
     Box();

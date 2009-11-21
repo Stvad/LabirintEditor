@@ -1,7 +1,7 @@
 #include "objectmanager.h"
 
 //static Box TempBox;
-std::vector <Object&> ObjectManager::boxes;
+std::vector <Object*> ObjectManager::boxes;
 std::vector <Plain> ObjectManager::plains;
 ObjectManager* ObjectManager::m_pInstance = NULL;
 int ObjectManager::m_IndexOfSelectedObject = -1;
@@ -67,11 +67,11 @@ void ObjectManager::Show()
     for(uint j = 0; j < boxes.size(); j++)
     {
         glLoadName(i+j);
-        boxes[j].Show();
+        boxes[j]->Show();
     }
 }
 
-Box& ObjectManager::GetBoxAt(int nIndex)
+Object* ObjectManager::GetBoxAt(int nIndex)
 {
     if(nIndex < 0 || nIndex > boxes.size() ) throw "Index error!";
     return boxes[nIndex];
@@ -96,16 +96,16 @@ int ObjectManager::GetPlainsSize()
 void ObjectManager::SelectObject(int Index)
 {
       if(Index < 0 || Index > boxes.size()) return;
-      if(m_IndexOfSelectedObject != -1) boxes[m_IndexOfSelectedObject].Color = m_TempColor;
-      m_TempColor = boxes[Index].Color;
-      boxes[Index].Color = m_SelectedColor;
+      if(m_IndexOfSelectedObject != -1) boxes[m_IndexOfSelectedObject]->Color = m_TempColor;
+      m_TempColor = boxes[Index]->Color;
+      boxes[Index]->Color = m_SelectedColor;
       m_IndexOfSelectedObject = Index;
 }
 
 void ObjectManager::UnselectObject()
 {
       if(m_IndexOfSelectedObject >= 0 && m_IndexOfSelectedObject < boxes.size())
-        boxes[m_IndexOfSelectedObject].Color = m_TempColor;
+        boxes[m_IndexOfSelectedObject]->Color = m_TempColor;
 }
 
 QDomElement ObjectManager::Serialize(QDomDocument& DomDocument)
@@ -114,7 +114,7 @@ QDomElement ObjectManager::Serialize(QDomDocument& DomDocument)
 
     for(uint i = 0; i < boxes.size(); i++)
     {
-        BoxesNode.appendChild(boxes[i].Serialize(DomDocument));
+        BoxesNode.appendChild(boxes[i]->Serialize(DomDocument));
     }
 
 
@@ -132,10 +132,9 @@ bool ObjectManager::Deserialize(const QDomElement& DomElement)
                 while(!CurBoxNode.isNull())
                 {
                    // MPlanetoidSystem* PS = new MPlanetoidSystem();
-                    Box tBox;
-                    if(tBox.Deserialize(CurBoxNode))
+                    Box* tBox = new Box;
+                    if(tBox->Deserialize(CurBoxNode))
                     {
-                        qDebug()<<"posxmenager"<<tBox.Widght;
                         boxes.push_back(tBox);
                     }
                     CurBoxNode = CurBoxNode.nextSiblingElement("Box");

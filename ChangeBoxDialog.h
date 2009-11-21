@@ -19,10 +19,10 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
-    Box m_Box;
+    Box* m_Box;
 private slots:
     void slChngBox();
-    void update(int index);
+    //void update(int index);
 
 private:
     Ui::ChangeBoxDialog *ui;

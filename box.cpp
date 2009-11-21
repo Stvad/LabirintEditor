@@ -1,10 +1,11 @@
 #include "box.h"
-
+/*
 float Object::x = 0;
 float Object::y = 0;
 float Object::z = 0;
 std::vector <Vertex> Object::points;
 std::vector <unsigned short> Object::indexes;
+*/
 
 Box::Box()
    : Position()
@@ -139,7 +140,7 @@ bool Box::Deserialize(const QDomElement& DomElement)
         }
     }
 
-    *this = CreateBox(Widght, Height, Lenght, VertexPerWidght, VertexPerHeight, VertexPerLenght);
+    this->CreateBox(Widght, Height, Lenght, VertexPerWidght, VertexPerHeight, VertexPerLenght);
 
     qDebug()<<"posxbox"<<Widght;
 

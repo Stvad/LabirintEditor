@@ -19,7 +19,7 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
-    Box m_Box;
+    Box* m_Box;
 private slots:
     void slAddBox();
 private:

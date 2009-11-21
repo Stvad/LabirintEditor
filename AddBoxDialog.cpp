@@ -33,8 +33,9 @@ void AddBoxDialog::slAddBox()
 void AddBoxDialog::AddBox(float x, float y, float z, float Widht, float Height, float Lenght, float VertexPerWidht, float VertexPerHeight, float VertexPerLenght, float Angle)
 {
     //Point3D Position(x, y, z);
-    m_Box = Box::CreateBox(Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
-    m_Box.Position = Point3D(x, y, z);
-    m_Box.Angle = Angle;
-    ObjectManager::AddOb(&m_Box);
+    m_Box = new Box;
+    m_Box->CreateBox(Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
+    m_Box->Position = Point3D(x, y, z);
+    m_Box->Angle = Angle;
+    ObjectManager::AddObject(m_Box);
 }

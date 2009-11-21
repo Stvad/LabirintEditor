@@ -19,10 +19,10 @@ public:
     QColor Color;
 
     void Show();
-    virtual QDomElement Serialize();
-    virtual bool Deserialize();
+    virtual QDomElement Serialize(QDomDocument& DomDocument);
+    virtual bool Deserialize(const QDomElement& DomElement);
 
-private:
+protected:
     float x;
     float y;
     float z;

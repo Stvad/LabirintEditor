@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "sector.h"
+#include <QtXml>
 
 class Plain
 {
@@ -19,6 +20,7 @@ public:
     bool Deserialize(const QDomElement& DomElement);
 
 protected:
+    QColor Color;
     float nWidghtSectors, nLenghtSectors;
     float fSectorWidght, fSectorLenght;
     float fVertexPerWidght, fVertexPerLenght;

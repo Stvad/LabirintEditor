@@ -159,7 +159,7 @@ QDomElement Plain::Serialize(QDomDocument& DomDocument)
     sColor.sprintf("%i, %i, %i", Color.red(), Color.green(), Color.blue());
 
     PlainNode.setAttribute("Position", sPosition);
-    PlainNode.setAttribute("Rotation", Angle);
+    PlainNode.setAttribute("Rotation", fAngle);
     PlainNode.setAttribute("Color", sColor);
     PlainNode.setAttribute("PlainType", bType);
     PlainNode.setAttribute("Texture_name", "");
@@ -168,13 +168,13 @@ QDomElement Plain::Serialize(QDomDocument& DomDocument)
 
     QDomElement SizeNode = DomDocument.createElement("Size");
 
-    SizeNode.setAttribute("Widght", Widght);
-    SizeNode.setAttribute("Lenght", Lenght);
+    SizeNode.setAttribute("Widght", fSectorWidght);
+    SizeNode.setAttribute("Lenght", fSectorLenght);
 
     QDomElement VpsNode = DomDocument.createElement("VPS");
 
-    VpsNode.setAttribute("Vertex_per_widght", VertexPerWidght);
-    VpsNode.setAttribute("Vertex_per_lenght", VertexPerLenght);
+    VpsNode.setAttribute("Vertex_per_widght", fVertexPerWidght);
+    VpsNode.setAttribute("Vertex_per_lenght", fVertexPerLenght);
 
     QDomElement OtherOptionsNode = DomDocument.createElement("Other");
 
@@ -184,7 +184,7 @@ QDomElement Plain::Serialize(QDomDocument& DomDocument)
 
     PlainNode.appendChild(OptionsNode);
 
-    return BoxNode;
+    return PlainNode;
 }
 
 bool Plain::Deserialize(const QDomElement& DomElement)
@@ -203,8 +203,8 @@ bool Plain::Deserialize(const QDomElement& DomElement)
 
         if(!SizeNode.isNull())
         {
-            Widght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
-            Lenght = SizeNode.attribute("Lenght").toFloat(&bIsOk2);
+            fSectorWidght = SizeNode.attribute("Widght").toFloat(&bIsOk1);
+            fSectorLenght = SizeNode.attribute("Lenght").toFloat(&bIsOk2);
             if(bIsOk1 && bIsOk2)
                 nNodeCount++;
         }
@@ -212,8 +212,8 @@ bool Plain::Deserialize(const QDomElement& DomElement)
         QDomElement VpsNode = OptionsNode.firstChildElement("VPS");
         if(!SizeNode.isNull())
         {
-            VertexPerWidght = VpsNode.attribute("Vertex_per_widght").toFloat(&bIsOk1);
-            VertexPerLenght = VpsNode.attribute("Vertex_per_lenght").toFloat(&bIsOk2);
+            fVertexPerWidght = VpsNode.attribute("Vertex_per_widght").toFloat(&bIsOk1);
+            fVertexPerLenght = VpsNode.attribute("Vertex_per_lenght").toFloat(&bIsOk2);
             if(bIsOk1 && bIsOk2)
                 nNodeCount++;
         }
@@ -228,7 +228,7 @@ bool Plain::Deserialize(const QDomElement& DomElement)
 
     //if (DomElement.attribute(PlainType));
 
-    *this = CreatePlain(Widght, Height, Lenght, VertexPerWidght, VertexPerHeight, VertexPerLenght);
+    //*this = CreatePlain(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght);
 
     QStringList sl = DomElement.attribute("Position", "1,1,1").split(",");
     Position.x = sl[0].toFloat(&bIsOk1);
@@ -244,7 +244,7 @@ bool Plain::Deserialize(const QDomElement& DomElement)
     if(bIsOk1 && bIsOk2 && bIsOk3)
         nNodeCount++;
 
-    Angle = DomElement.attribute("Rotation").toFloat(&bIsOk1);
+    fAngle = DomElement.attribute("Rotation").toFloat(&bIsOk1);
     if(bIsOk1)
                 nNodeCount++;
 

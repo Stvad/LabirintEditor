@@ -8,9 +8,9 @@ ChangeBoxDialog::ChangeBoxDialog(QWidget *parent) :
     ui->setupUi(this);
     ui->spinBox->setMinimum(1);
     ui->spinBox->setMaximum(ObjectManager::GetBoxesSize());
-    ChangeBoxDialog::update(1);
+    //ChangeBoxDialog::update(1);
 
-    connect(ui->spinBox, SIGNAL(valueChanged(int)), this, SLOT(update(int)));
+   // connect(ui->spinBox, SIGNAL(valueChanged(int)), this, SLOT(update(int)));
     connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(slChngBox()));
 }
 
@@ -40,23 +40,24 @@ void ChangeBoxDialog::ChngBox(float x, float y, float z, float Widht, float Heig
 {
     //ObjectManager::Remove(ui->spinBox->value());
     //Point3D Position(x, y, z);
-    ObjectManager::GetBoxAt(ui->spinBox->value()) = BoxCreator::CreateBox(Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
-    ObjectManager::GetBoxAt(ui->spinBox->value()).Position = Point3D(x,y,z);
-    ObjectManager::GetBoxAt(ui->spinBox->value()).Angle = Angle;
+    //ObjectManager::GetBoxAt(ui->spinBox->value())->CreateBox(Widht, Height, Lenght, VertexPerWidht, VertexPerHeight, VertexPerLenght);
+    //ObjectManager::GetBoxAt(ui->spinBox->value())->Position = Point3D(x,y,z);
+    //ObjectManager::GetBoxAt(ui->spinBox->value())->Angle = Angle;
     //ObjectManager::AddBox(m_Box);
     this->close();
 }
-void ChangeBoxDialog::update(int index)
+/*void ChangeBoxDialog::update(int index)
 {
+    m_Box = new Box;
     m_Box = ObjectManager::GetBoxAt(index -1);
-    ui->leAngle->setText(QString::number(m_Box.Angle));
-    ui->lePosX->setText(QString::number(m_Box.Position.x));
-    ui->lePosY->setText(QString::number(m_Box.Position.y));
-    ui->lePosZ->setText(QString::number(m_Box.Position.z));
-    ui->leWidht->setText(QString::number(m_Box.Widght));
-    ui->leHeight->setText(QString::number(m_Box.Height));
-    ui->leLenght->setText(QString::number(m_Box.Lenght));
-    ui->leWidhtPoints->setText(QString::number(m_Box.VertexPerWidght));
-    ui->leHeightPoints->setText(QString::number(m_Box.VertexPerHeight));
-    ui->leLenghtPoints->setText(QString::number(m_Box.VertexPerLenght));
-}
+    ui->leAngle->setText(QString::number(m_Box->Angle));
+    ui->lePosX->setText(QString::number(m_Box->Position.x));
+    ui->lePosY->setText(QString::number(m_Box->Position.y));
+    ui->lePosZ->setText(QString::number(m_Box->Position.z));
+    ui->leWidht->setText(QString::number(m_Box->Widght));
+    ui->leHeight->setText(QString::number(m_Box->Height));
+    ui->leLenght->setText(QString::number(m_Box->Lenght));
+    ui->leWidhtPoints->setText(QString::number(m_Box->VertexPerWidght));
+    ui->leHeightPoints->setText(QString::number(m_Box->VertexPerHeight));
+    ui->leLenghtPoints->setText(QString::number(m_Box->VertexPerLenght));
+}*/
