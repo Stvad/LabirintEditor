@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Sat Nov 21 02:33:42 2009
+** Created: Sat Nov 21 15:23:40 2009
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.6.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -37,14 +37,14 @@ static const uint qt_meta_data_MainWindow[] = {
       65,   11,   11,   11, 0x0a,
       89,   11,   11,   11, 0x0a,
      101,   11,   11,   11, 0x0a,
-     115,   11,   11,   11, 0x0a,
-     123,   11,   11,   11, 0x0a,
-     131,   11,   11,   11, 0x0a,
-     139,   11,   11,   11, 0x0a,
-     148,   11,   11,   11, 0x0a,
-     157,   11,   11,   11, 0x0a,
-     166,   11,   11,   11, 0x0a,
-     176,   11,   11,   11, 0x0a,
+     117,   11,   11,   11, 0x0a,
+     125,   11,   11,   11, 0x0a,
+     133,   11,   11,   11, 0x0a,
+     141,   11,   11,   11, 0x0a,
+     150,   11,   11,   11, 0x0a,
+     159,   11,   11,   11, 0x0a,
+     168,   11,   11,   11, 0x0a,
+     178,   11,   11,   11, 0x0a,
 
        0        // eod
 };
@@ -53,7 +53,7 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0ShowAddBoxDlg()\0"
     "ShowChangeBoxDlg()\0ShowDellNBoxDlg()\0"
     "ShowChangeSettingsDlg()\0DeLastBox()\0"
-    "DelAllBoxes()\0setXP()\0setYP()\0setZP()\0"
+    "DelAllObjects()\0setXP()\0setYP()\0setZP()\0"
     "setXYP()\0setYZP()\0setXZP()\0SaveMap()\0"
     "LoadMap()\0"
 };
@@ -92,7 +92,7 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: ShowDellNBoxDlg(); break;
         case 3: ShowChangeSettingsDlg(); break;
         case 4: DeLastBox(); break;
-        case 5: DelAllBoxes(); break;
+        case 5: DelAllObjects(); break;
         case 6: setXP(); break;
         case 7: setYP(); break;
         case 8: setZP(); break;

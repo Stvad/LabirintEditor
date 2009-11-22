@@ -52,7 +52,7 @@ private :
 
     BoxCreator m_BoxCreator;
     Box* m_Box;
-    Plain mPlain;
+    Plain* mPlain;
 
 
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sat Nov 21 02:28:25 2009
+** Created: Sat Nov 21 16:40:48 2009
 **      by: Qt User Interface Compiler version 4.6.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -23,6 +23,7 @@
 #include <QtGui/QRadioButton>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
+#include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 #include "myglwidget.h"
 
@@ -42,11 +43,12 @@ public:
     QPushButton *pbClose;
     QTabWidget *tabWidget;
     QWidget *tab;
-    QPushButton *pbDellNBox;
-    QPushButton *pbDellLustBox;
-    QPushButton *pbDellAllBoxes;
-    QPushButton *pbChangeBox;
+    QVBoxLayout *verticalLayout_2;
     QPushButton *pbAddBox;
+    QPushButton *pbChangeBox;
+    QPushButton *pbDellLustBox;
+    QPushButton *pbDellNBox;
+    QPushButton *pbDellAllBoxes;
     QWidget *tab_2;
     QLabel *lbPVzd;
     QRadioButton *rbPX;
@@ -64,7 +66,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1024, 709);
+        MainWindow->resize(1031, 709);
         MainWindow->setFocusPolicy(Qt::NoFocus);
         action = new QAction(MainWindow);
         action->setObjectName(QString::fromUtf8("action"));
@@ -90,24 +92,36 @@ public:
         pbClose->setGeometry(QRect(890, 630, 97, 25));
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(850, 30, 171, 511));
+        tabWidget->setGeometry(QRect(850, 30, 176, 195));
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
-        pbDellNBox = new QPushButton(tab);
-        pbDellNBox->setObjectName(QString::fromUtf8("pbDellNBox"));
-        pbDellNBox->setGeometry(QRect(20, 100, 135, 25));
-        pbDellLustBox = new QPushButton(tab);
-        pbDellLustBox->setObjectName(QString::fromUtf8("pbDellLustBox"));
-        pbDellLustBox->setGeometry(QRect(20, 70, 135, 25));
-        pbDellAllBoxes = new QPushButton(tab);
-        pbDellAllBoxes->setObjectName(QString::fromUtf8("pbDellAllBoxes"));
-        pbDellAllBoxes->setGeometry(QRect(20, 130, 135, 25));
-        pbChangeBox = new QPushButton(tab);
-        pbChangeBox->setObjectName(QString::fromUtf8("pbChangeBox"));
-        pbChangeBox->setGeometry(QRect(20, 40, 135, 25));
+        verticalLayout_2 = new QVBoxLayout(tab);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         pbAddBox = new QPushButton(tab);
         pbAddBox->setObjectName(QString::fromUtf8("pbAddBox"));
-        pbAddBox->setGeometry(QRect(20, 10, 135, 25));
+
+        verticalLayout_2->addWidget(pbAddBox);
+
+        pbChangeBox = new QPushButton(tab);
+        pbChangeBox->setObjectName(QString::fromUtf8("pbChangeBox"));
+
+        verticalLayout_2->addWidget(pbChangeBox);
+
+        pbDellLustBox = new QPushButton(tab);
+        pbDellLustBox->setObjectName(QString::fromUtf8("pbDellLustBox"));
+
+        verticalLayout_2->addWidget(pbDellLustBox);
+
+        pbDellNBox = new QPushButton(tab);
+        pbDellNBox->setObjectName(QString::fromUtf8("pbDellNBox"));
+
+        verticalLayout_2->addWidget(pbDellNBox);
+
+        pbDellAllBoxes = new QPushButton(tab);
+        pbDellAllBoxes->setObjectName(QString::fromUtf8("pbDellAllBoxes"));
+
+        verticalLayout_2->addWidget(pbDellAllBoxes);
+
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
@@ -139,7 +153,7 @@ public:
         MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1024, 24));
+        menubar->setGeometry(QRect(0, 0, 1031, 24));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         menu_2 = new QMenu(menubar);
@@ -158,7 +172,7 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(pbClose, SIGNAL(clicked()), MainWindow, SLOT(close()));
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -174,11 +188,11 @@ public:
         action_3->setText(QApplication::translate("MainWindow", "\320\222\321\226\320\264\320\272\321\200\320\270\321\202\320\270", 0, QApplication::UnicodeUTF8));
         pbChangeSettings->setText(QApplication::translate("MainWindow", "\320\227\320\274\321\226\320\275\320\270\321\202\320\270 \320\275\320\260\320\273\320\260\321\210\321\202\321\203\320\262\320\260\320\275\320\275\321\217", 0, QApplication::UnicodeUTF8));
         pbClose->setText(QApplication::translate("MainWindow", "\320\227\320\260\321\207\320\270\320\275\320\270\321\202\320\270", 0, QApplication::UnicodeUTF8));
-        pbDellNBox->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \320\261\320\276\320\272\321\201 \342\204\226", 0, QApplication::UnicodeUTF8));
-        pbDellLustBox->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \320\276\321\201\321\202\320\260\320\275\320\275\321\226\320\271", 0, QApplication::UnicodeUTF8));
-        pbDellAllBoxes->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \321\203\321\201\321\226 \320\261\320\276\320\272\321\201\320\270", 0, QApplication::UnicodeUTF8));
-        pbChangeBox->setText(QApplication::translate("MainWindow", "\320\227\320\274\321\226\320\275\320\270\321\202\320\270 \320\261\320\276\320\272\321\201", 0, QApplication::UnicodeUTF8));
         pbAddBox->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\264\320\260\321\202\320\270 \320\261\320\276\320\272\321\201", 0, QApplication::UnicodeUTF8));
+        pbChangeBox->setText(QApplication::translate("MainWindow", "\320\227\320\274\321\226\320\275\320\270\321\202\320\270 \320\261\320\276\320\272\321\201", 0, QApplication::UnicodeUTF8));
+        pbDellLustBox->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \320\276\321\201\321\202\320\260\320\275\320\275\321\226\320\271", 0, QApplication::UnicodeUTF8));
+        pbDellNBox->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \320\261\320\276\320\272\321\201 \342\204\226", 0, QApplication::UnicodeUTF8));
+        pbDellAllBoxes->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \321\203\321\201\321\226 \320\261\320\276\320\272\321\201\320\270", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "\320\221\320\276\320\272\321\201\320\270", 0, QApplication::UnicodeUTF8));
         lbPVzd->setText(QApplication::translate("MainWindow", "\320\237\320\265\321\200\320\265\320\274\321\226\321\211\321\203\320\262\320\260\321\202\320\270 \320\262\320\267\320\264\320\276\320\262\320\266:", 0, QApplication::UnicodeUTF8));
         rbPX->setText(QApplication::translate("MainWindow", "X", 0, QApplication::UnicodeUTF8));

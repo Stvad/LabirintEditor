@@ -142,7 +142,6 @@ bool Box::Deserialize(const QDomElement& DomElement)
 
     this->CreateBox(Widght, Height, Lenght, VertexPerWidght, VertexPerHeight, VertexPerLenght);
 
-    qDebug()<<"posxbox"<<Widght;
 
     QStringList sl = DomElement.attribute("Position", "1,1,1").split(",");
     Position.x = sl[0].toFloat(&bIsOk1);

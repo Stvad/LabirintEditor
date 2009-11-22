@@ -1,7 +1,7 @@
 #include "objectmanager.h"
 
 //static Box TempBox;
-std::vector <Object*> ObjectManager::boxes;
+std::vector <Object*> ObjectManager::objects;
 std::vector <Plain> ObjectManager::plains;
 ObjectManager* ObjectManager::m_pInstance = NULL;
 int ObjectManager::m_IndexOfSelectedObject = -1;
@@ -23,7 +23,7 @@ ObjectManager* ObjectManager::GetInstance()
 
 void ObjectManager::AddObject(Object* NewObject)
 {
-    boxes.push_back(NewObject);
+    objects.push_back(NewObject);
 }
 
 void ObjectManager::AddPlain(Plain NewPlain)
@@ -33,23 +33,23 @@ void ObjectManager::AddPlain(Plain NewPlain)
 
 void ObjectManager::ClearAll()
 {
-    boxes.clear();
+    objects.clear();
     plains.clear();
 }
 
 void ObjectManager::RemoveLastBox()
 {
-    boxes.pop_back();
+    objects.pop_back();
 }
 
 void ObjectManager::RemoveLastPlain()
 {
-    boxes.pop_back();
+    objects.pop_back();
 }
 
 void ObjectManager::Remove(int pos)
 {
-    boxes.erase(boxes.begin()+pos);
+    objects.erase(objects.begin()+pos);
 }
 
 void ObjectManager::Show()
@@ -64,17 +64,17 @@ void ObjectManager::Show()
         plains[i].Show();
     }
 
-    for(uint j = 0; j < boxes.size(); j++)
+    for(uint j = 0; j < objects.size(); j++)
     {
         glLoadName(i+j);
-        boxes[j]->Show();
+        objects[j]->Show();
     }
 }
 
 Object* ObjectManager::GetBoxAt(int nIndex)
 {
-    if(nIndex < 0 || nIndex > boxes.size() ) throw "Index error!";
-    return boxes[nIndex];
+    if(nIndex < 0 || nIndex > objects.size() ) throw "Index error!";
+    return objects[nIndex];
 }
 
 Plain& ObjectManager::GetPlainAt(int nIndex)
@@ -83,9 +83,9 @@ Plain& ObjectManager::GetPlainAt(int nIndex)
     return plains[nIndex];
 }
 
-int ObjectManager::GetBoxesSize()
+int ObjectManager::GetObjectsSize()
 {
-    return boxes.size();
+    return objects.size();
 }
 
 int ObjectManager::GetPlainsSize()
@@ -95,30 +95,30 @@ int ObjectManager::GetPlainsSize()
 
 void ObjectManager::SelectObject(int Index)
 {
-      if(Index < 0 || Index > boxes.size()) return;
-      if(m_IndexOfSelectedObject != -1) boxes[m_IndexOfSelectedObject]->Color = m_TempColor;
-      m_TempColor = boxes[Index]->Color;
-      boxes[Index]->Color = m_SelectedColor;
+      if(Index < 0 || Index > objects.size()) return;
+      if(m_IndexOfSelectedObject != -1) objects[m_IndexOfSelectedObject]->Color = m_TempColor;
+      m_TempColor = objects[Index]->Color;
+      objects[Index]->Color = m_SelectedColor;
       m_IndexOfSelectedObject = Index;
 }
 
 void ObjectManager::UnselectObject()
 {
-      if(m_IndexOfSelectedObject >= 0 && m_IndexOfSelectedObject < boxes.size())
-        boxes[m_IndexOfSelectedObject]->Color = m_TempColor;
+      if(m_IndexOfSelectedObject >= 0 && m_IndexOfSelectedObject < objects.size())
+        objects[m_IndexOfSelectedObject]->Color = m_TempColor;
 }
 
 QDomElement ObjectManager::Serialize(QDomDocument& DomDocument)
 {
-    QDomElement BoxesNode = DomDocument.createElement("Boxes");
+    QDomElement ObjectsNode = DomDocument.createElement("Objects");
 
-    for(uint i = 0; i < boxes.size(); i++)
+    for(uint i = 0; i < objects.size(); i++)
     {
-        BoxesNode.appendChild(boxes[i]->Serialize(DomDocument));
+        ObjectsNode.appendChild(objects[i]->Serialize(DomDocument));
     }
 
 
-    return BoxesNode;
+    return ObjectsNode;
 }
 
 bool ObjectManager::Deserialize(const QDomElement& DomElement)
@@ -127,7 +127,7 @@ bool ObjectManager::Deserialize(const QDomElement& DomElement)
     if(!DomElement.isNull())
     {
          bResult = true;
-                boxes.clear();
+                objects.clear();
                 QDomElement CurBoxNode = DomElement.firstChildElement("Box");
                 while(!CurBoxNode.isNull())
                 {
@@ -135,7 +135,7 @@ bool ObjectManager::Deserialize(const QDomElement& DomElement)
                     Box* tBox = new Box;
                     if(tBox->Deserialize(CurBoxNode))
                     {
-                        boxes.push_back(tBox);
+                        objects.push_back(tBox);
                     }
                     CurBoxNode = CurBoxNode.nextSiblingElement("Box");
                 }
@@ -147,26 +147,31 @@ bool ObjectManager::Deserialize(const QDomElement& DomElement)
     return bResult;
 }
 
+ObjectManager::~ObjectManager()
+{
+    ClearAll();
+}
+
   /*
   void ObjectManager::MoveBoxLeft()
   {
-      boxes[m_IndexOfSelectedBox].Position.x -= 1;
+      objects[m_IndexOfSelectedBox].Position.x -= 1;
       //updateGL();
   }
 
   void ObjectManager::MoveBoxRight()
   {
-      boxes[m_IndexOfSelectedBox].Position.x -= 1;
+      objects[m_IndexOfSelectedBox].Position.x -= 1;
   }
 
   void ObjectManager::MoveBoxUp()
   {
-      boxes[m_IndexOfSelectedBox].Position.y += 1;
+      objects[m_IndexOfSelectedBox].Position.y += 1;
   }
 
   void ObjectManager::MoveBoxDown()
   {
-      boxes[m_IndexOfSelectedBox].Position.y -= 1;
+      objects[m_IndexOfSelectedBox].Position.y -= 1;
   }
   //*/
 

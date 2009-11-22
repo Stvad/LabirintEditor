@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'DeliteBoxDialog.ui'
+** Form generated from reading UI file 'DeliteBoxDialog.ui'
 **
-** Created: Wed Nov 18 16:27:36 2009
-**      by: Qt User Interface Compiler version 4.5.3
+** Created: Sat Nov 21 14:00:28 2009
+**      by: Qt User Interface Compiler version 4.6.0
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_DELITEBOXDIALOG_H
@@ -57,7 +57,6 @@ public:
     {
         DeliteBoxDialog->setWindowTitle(QApplication::translate("DeliteBoxDialog", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \320\261\320\276\320\272\321\201 \342\204\226", 0, QApplication::UnicodeUTF8));
         lbNDelBox->setText(QApplication::translate("DeliteBoxDialog", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270 \320\261\320\276\320\272\321\201 \342\204\226", 0, QApplication::UnicodeUTF8));
-        Q_UNUSED(DeliteBoxDialog);
     } // retranslateUi
 
 };

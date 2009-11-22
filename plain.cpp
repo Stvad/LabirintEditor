@@ -16,20 +16,27 @@ Plain::Plain(const std::vector<Sector> &sectors, float fSectorWidght, float fSec
     this->bType = bType;
 }
 
-Plain Plain::CreatePlain(bool bType, float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
+void Plain::CreatePlain(bool bType, float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
 {
-    Plain tPlain;
+    this->sectors = sectors;
+    this->fSectorWidght = fSectorWidght;
+    this->fSectorLenght = fSectorLenght;
+    this->fVertexPerWidght = fVertexPerWidght;
+    this->fVertexPerLenght = fVertexPerLenght;
+    this->nWidghtSectors = nWidghtSectors;
+    this->nLenghtSectors = nLenghtSectors;
+    this->bType = bType;
+    
     if(!bType)
-         tPlain = CreateFloor(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
+         this->CreateFloor(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
     else
-         tPlain = CreateCeiling(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
-    return tPlain;
+         this->CreateCeiling(fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors);
+    //return tPlain;
 }
 
-Plain Plain::CreateFloor(float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
+void Plain::CreateFloor(float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
 {
     Point3D Position(0, 0, 0);
-    std::vector <Sector> sectors;
     float xn = fSectorWidght / fVertexPerWidght, zn = fSectorLenght / fVertexPerLenght;
 
     for(uint sz = Position.z; sz < (nLenghtSectors * fSectorLenght); sz += fSectorLenght)
@@ -71,13 +78,12 @@ Plain Plain::CreateFloor(float fSectorWidght, float fSectorLenght, float fVertex
                     }
             sectors.push_back(Sector(points, indexes, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, Point3D(sx, Position.y, sz)));
         }
-    return Plain(sectors, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors, false);
+    //return Plain(sectors, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors, false);
 }
 
-Plain Plain::CreateCeiling(float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
+void Plain::CreateCeiling(float fSectorWidght, float fSectorLenght, float fVertexPerWidght, float fVertexPerLenght, float nWidghtSectors, float nLenghtSectors)
 {
     Point3D Position(0, 0, 0);
-    std::vector <Sector> sectors;
     float xn = fSectorWidght / fVertexPerWidght, zn = fSectorLenght / fVertexPerLenght;
 
     for(uint sz = Position.z; sz < (nLenghtSectors * fSectorLenght); sz += fSectorLenght)
@@ -118,7 +124,7 @@ Plain Plain::CreateCeiling(float fSectorWidght, float fSectorLenght, float fVert
 
             sectors.push_back(Sector(points, indexes, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, Point3D(sx, Position.y, sz)));
         }
-    return Plain(sectors, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors, true);
+    //return Plain(sectors, fSectorWidght, fSectorLenght, fVertexPerWidght, fVertexPerLenght, nWidghtSectors, nLenghtSectors, true);
 }
 
 void Plain::Show()
@@ -131,7 +137,7 @@ void Plain::Show()
 
 void Plain::SetAngle(float Angle)
 {
-    fAngle = Angle;
+    Angle = Angle;
     for (uint i = 0; i < sectors.size(); i++)
     {
         sectors[i].SetAngle(Angle);
@@ -159,7 +165,7 @@ QDomElement Plain::Serialize(QDomDocument& DomDocument)
     sColor.sprintf("%i, %i, %i", Color.red(), Color.green(), Color.blue());
 
     PlainNode.setAttribute("Position", sPosition);
-    PlainNode.setAttribute("Rotation", fAngle);
+    PlainNode.setAttribute("Rotation", Angle);
     PlainNode.setAttribute("Color", sColor);
     PlainNode.setAttribute("PlainType", bType);
     PlainNode.setAttribute("Texture_name", "");
@@ -244,7 +250,7 @@ bool Plain::Deserialize(const QDomElement& DomElement)
     if(bIsOk1 && bIsOk2 && bIsOk3)
         nNodeCount++;
 
-    fAngle = DomElement.attribute("Rotation").toFloat(&bIsOk1);
+    Angle = DomElement.attribute("Rotation").toFloat(&bIsOk1);
     if(bIsOk1)
                 nNodeCount++;
 

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
+    <width>1031</width>
     <height>709</height>
    </rect>
   </property>
@@ -61,82 +61,54 @@
      <rect>
       <x>850</x>
       <y>30</y>
-      <width>171</width>
-      <height>511</height>
+      <width>176</width>
+      <height>195</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>Бокси</string>
      </attribute>
-     <widget class="QPushButton" name="pbDellNBox">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>100</y>
-        <width>135</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Видалити бокс №</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pbDellLustBox">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>70</y>
-        <width>135</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Видалити останній</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pbDellAllBoxes">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>130</y>
-        <width>135</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Видалити усі бокси</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pbChangeBox">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>40</y>
-        <width>135</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Змінити бокс</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pbAddBox">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>10</y>
-        <width>135</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Додати бокс</string>
-      </property>
-     </widget>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pbAddBox">
+        <property name="text">
+         <string>Додати бокс</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbChangeBox">
+        <property name="text">
+         <string>Змінити бокс</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbDellLustBox">
+        <property name="text">
+         <string>Видалити останній</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbDellNBox">
+        <property name="text">
+         <string>Видалити бокс №</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pbDellAllBoxes">
+        <property name="text">
+         <string>Видалити усі бокси</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
@@ -242,7 +214,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1024</width>
+     <width>1031</width>
      <height>24</height>
     </rect>
    </property>

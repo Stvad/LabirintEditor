@@ -14,7 +14,7 @@ bool XmlLoader::LoadFile(QString sFileName)
         if(DomDoc.setContent(&File))
         {
             QDomElement Root = DomDoc.documentElement();
-            if(ObjectManager::Deserialize(Root.firstChildElement("Boxes")))
+            if(ObjectManager::Deserialize(Root.firstChildElement("Objects")))
             {
                 bResult = true;
                 ObjectManager::Show();

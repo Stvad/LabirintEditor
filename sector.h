@@ -15,7 +15,7 @@ public:
     Point3D GetPosition();
     void SetPosition(float x, float y, float z);
     void Show();
-
+    
 protected:
     int m_IndexSize;
     float fWidght, fLenght;

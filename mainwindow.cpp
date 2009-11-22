@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(m_ui->pbDellNBox, SIGNAL(clicked()), this, SLOT(ShowDellNBoxDlg()));
     connect(m_ui->pbChangeSettings, SIGNAL(clicked()), this, SLOT(ShowChangeSettingsDlg()));
     connect(m_ui->pbDellLustBox, SIGNAL(clicked()), this, SLOT(DeLastBox()));
-    connect(m_ui->pbDellAllBoxes, SIGNAL(clicked()), this, SLOT(DelAllBoxes()));
+    connect(m_ui->pbDellAllBoxes, SIGNAL(clicked()), this, SLOT(DelAllObjects()));
     connect(m_ui->rbPX, SIGNAL(clicked()), this, SLOT(setXP()));
     connect(m_ui->rbPY, SIGNAL(clicked()), this, SLOT(setYP()));
     connect(m_ui->rbPZ, SIGNAL(clicked()), this, SLOT(setZP()));
@@ -76,7 +76,7 @@ void MainWindow::DeLastBox()
 {
     ObjectManager::RemoveLastBox();
 }
-void MainWindow::DelAllBoxes()
+void MainWindow::DelAllObjects()
 {
     ObjectManager::ClearAll();
 }

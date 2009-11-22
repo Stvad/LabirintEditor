@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'nchangeboxdialog.ui'
+** Form generated from reading UI file 'nchangeboxdialog.ui'
 **
-** Created: Wed Nov 18 16:27:36 2009
-**      by: Qt User Interface Compiler version 4.5.3
+** Created: Sat Nov 21 14:00:29 2009
+**      by: Qt User Interface Compiler version 4.6.0
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_NCHANGEBOXDIALOG_H
@@ -56,7 +56,6 @@ public:
     {
         NChangeBoxDialog->setWindowTitle(QApplication::translate("NChangeBoxDialog", "\320\222\320\270\320\261\320\265\321\200\321\226\321\202\321\214 \342\204\226 \320\261\320\276\320\272\321\201\320\260 \321\217\320\272\320\270\320\271 \321\202\321\200\320\265\320\261\320\260 \320\267\320\274\321\226\320\275\320\270\321\202\320\270", 0, QApplication::UnicodeUTF8));
         lbNChnglBox->setText(QApplication::translate("NChangeBoxDialog", "\320\227\320\274\321\226\320\275\320\270\321\202\320\270 \320\261\320\276\320\272\321\201 \342\204\226", 0, QApplication::UnicodeUTF8));
-        Q_UNUSED(NChangeBoxDialog);
     } // retranslateUi
 
 };

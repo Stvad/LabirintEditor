@@ -23,9 +23,10 @@ MyGLWidget::MyGLWidget(QWidget *parent)
 
     Point3D Position(0, 0, 0);
 
-    mPlain = Plain::CreatePlain(true, 1, 2, 1, 1, 3, 2);
-    mPlain.SetPosition(5, 5, 5);
-    ObjectManager::AddPlain(mPlain);
+    mPlain = new Plain;
+    mPlain->CreatePlain(true, 1, 2, 1, 1, 3, 2);
+    mPlain->SetPosition(5, 5, 5);
+    ObjectManager::AddObject(mPlain);
     m_Box = new Box;
     m_Box->CreateBox(10, 10, 5, 5, 5, 5);
     m_Box->Color = QColor(128, 128, 128);

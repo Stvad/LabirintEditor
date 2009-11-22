@@ -13,6 +13,7 @@ private:
         static QColor m_TempColor;
         static QColor m_SelectedColor;
         ObjectManager();
+        ~ObjectManager();
 public:
 
   static  void Show();
@@ -24,7 +25,7 @@ public:
   static  void AddPlain(Plain);
   static Object* GetBoxAt(int nIndex);
   static Plain& GetPlainAt(int nIndex);
-  static int GetBoxesSize();
+  static int GetObjectsSize();
   static int GetPlainsSize();
   static void SelectObject(int Index);
   static void UnselectObject();
@@ -32,7 +33,7 @@ public:
   static bool Deserialize(const QDomElement& DomElement);
 
 protected:
- static std::vector <Object*> boxes;
+ static std::vector <Object*> objects;
  static std::vector <Plain> plains;
  static int m_IndexOfSelectedObject;    // индекс текущего выделенного бокса
  //Box TempBox;

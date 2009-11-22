@@ -1,10 +1,10 @@
 /********************************************************************************
-** Form generated from reading ui file 'BoxBrokingMatchesDialog.ui'
+** Form generated from reading UI file 'BoxBrokingMatchesDialog.ui'
 **
-** Created: Wed Nov 18 16:27:36 2009
-**      by: Qt User Interface Compiler version 4.5.3
+** Created: Sat Nov 21 14:00:29 2009
+**      by: Qt User Interface Compiler version 4.6.0
 **
-** WARNING! All changes made in this file will be lost when recompiling ui file!
+** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
 #ifndef UI_BOXBROKINGMATCHESDIALOG_H
@@ -78,7 +78,6 @@ public:
         lbHeightPoints->setText(QApplication::translate("BoxBrokingMatchesDialog", "\320\222\320\270\321\201\320\276\321\202\321\226", 0, QApplication::UnicodeUTF8));
         lbLenghtPoints->setText(QApplication::translate("BoxBrokingMatchesDialog", "\320\224\320\276\320\262\320\266\320\270\320\275\321\226", 0, QApplication::UnicodeUTF8));
         lbKPO->setText(QApplication::translate("BoxBrokingMatchesDialog", "\320\232\321\226\320\273\321\214\320\272\321\226\321\201\321\202\321\214 \321\202\320\276\321\207\320\276\320\272 \320\277\320\276:", 0, QApplication::UnicodeUTF8));
-        Q_UNUSED(BoxBrokingMatchesDialog);
     } // retranslateUi
 
 };

@@ -28,7 +28,7 @@ public slots:
     void ShowDellNBoxDlg();
     void ShowChangeSettingsDlg();
     void DeLastBox();
-    void DelAllBoxes();
+    void DelAllObjects();
     void setXP();
     void setYP();
     void setZP();

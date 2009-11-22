@@ -26,7 +26,7 @@ private slots:
 private:
     Ui::NChangeBoxDialog *ui;
     void ShowChangeBoxDialog(int N);
-    Box m_Box;
+   // Box m_Box;
 };
 
 #endif // NCHANGEBOXDIALOG_H

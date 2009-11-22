@@ -7,7 +7,7 @@ ChangeBoxDialog::ChangeBoxDialog(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->spinBox->setMinimum(1);
-    ui->spinBox->setMaximum(ObjectManager::GetBoxesSize());
+    ui->spinBox->setMaximum(ObjectManager::GetObjectsSize());
     //ChangeBoxDialog::update(1);
 
    // connect(ui->spinBox, SIGNAL(valueChanged(int)), this, SLOT(update(int)));
