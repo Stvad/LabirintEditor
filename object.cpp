@@ -14,3 +14,14 @@ void Object::Show()
     glDrawElements(GL_TRIANGLES, m_IndexSize, GL_UNSIGNED_SHORT, m_indexes);
     glPopMatrix();
 }
+
+QDomElement Object::Serialize(QDomDocument& DomDocument)
+{
+
+}
+
+bool Object::Deserialize(const QDomElement& DomElement)
+{
+
+}
+
